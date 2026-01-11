@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cloud Networking Explained – On-Prem to Azure & AWS</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.7;
+      margin: 40px;
+      background: #f9f9f9;
+      color: #222;
+    }
+    h1, h2, h3 {
+      color: #0b5394;
+    }
+    section {
+      background: #ffffff;
+      padding: 25px;
+      margin-bottom: 40px;
+      border-radius: 6px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.05);
+    }
+    .why {
+      background: #eef6ff;
+      padding: 10px;
+      border-left: 4px solid #0b5394;
+      margin: 15px 0;
+    }
+    .interview {
+      background: #f0fff4;
+      padding: 10px;
+      border-left: 4px solid #2f855a;
+      margin: 15px 0;
+    }
+    code {
+      background: #eee;
+      padding: 3px 6px;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>Cloud Networking – Explained from Ground Up</h1>
+<p>
+This page explains cloud networking the way a <b>senior DevOps / Platform / Cloud engineer</b>
+should understand it.  
+We start from <b>on-prem reality</b> and move step by step into <b>Azure and AWS</b>.
+</p>
+
+---
+
+<section>
+<h2>1. Why Networking Exists (Very First Principle)</h2>
+
+<div class="why">
+Networking exists for only three reasons.
+</div>
+
+<ul>
+  <li><b>Connectivity</b> – systems must talk to each other</li>
+  <li><b>Isolation</b> – systems must NOT all talk to each other</li>
+  <li><b>Control</b> – traffic must be allowed intentionally</li>
+</ul>
+
+<p>
+Everything in cloud networking is just a software version of physical networking.
+</p>
+
+<div class="interview">
+Interview sentence:  
+“Cloud networking is on-prem networking implemented in software.”
+</div>
+</section>
+
+---
+
+<section>
+<h2>2. On-Prem Networking (What Actually Existed)</h2>
+
+<p>
+In a data center, networking was very physical.
+</p>
+
+<ul>
+  <li>LAN – local network inside a building</li>
+  <li>Ethernet cables</li>
+  <li>Switches – connect servers</li>
+  <li>Routers – connect networks</li>
+  <li>Firewalls – allow or block traffic</li>
+</ul>
+
+<h3>DMZ (Demilitarized Zone)</h3>
+<p>
+DMZ is a buffer network between internet and internal systems.
+</p>
+
+<div class="why">
+Why DMZ exists:  
+Internet traffic must never directly hit databases or internal systems.
+</div>
+
+<div class="interview">
+If DMZ doesn’t exist, one breach exposes the entire data center.
+</div>
+</section>
+
+---
+
+<section>
+<h2>3. Virtualization Changed Hardware, Not Networking</h2>
+
+<p>
+When VMware/Hyper-V came:
+</p>
+
+<ul>
+  <li>One physical server → many VMs</li>
+  <li>Physical NIC → virtual NIC</li>
+  <li>Physical switch → virtual switch</li>
+</ul>
+
+<p>
+But networking rules remained the same.
+</p>
+
+<div class="interview">
+Key realization:  
+A VM still lives inside a network.
+</div>
+</section>
+
+---
+
+<section>
+<h2>4. Cloud Networking Core Concept</h2>
+
+<h3>VPC / VNet</h3>
+
+<ul>
+  <li>Azure → VNet</li>
+  <li>AWS → VPC</li>
+</ul>
+
+<p>
+A VPC/VNet is simply your <b>private LAN in the cloud</b>.
+</p>
+
+<div class="why">
+Why it exists:  
+You need isolation just like an on-prem LAN.
+</div>
+
+<div class="interview">
+VPC/VNet is the security and routing boundary.
+</div>
+</section>
+
+---
+
+<section>
+<h2>5. Subnets – Why We Divide Networks</h2>
+
+<p>
+Subnets are cloud versions of VLANs.
+</p>
+
+<h3>Public Subnet</h3>
+<ul>
+  <li>Has internet route</li>
+  <li>Used for load balancers, gateways</li>
+</ul>
+
+<h3>Private Subnet</h3>
+<ul>
+  <li>No direct internet access</li>
+  <li>Used for applications, AKS/EKS, databases</li>
+</ul>
+
+<div class="interview">
+Golden rule:  
+Databases never live in public subnets.
+</div>
+</section>
+
+---
+
+<section>
+<h2>6. NIC – The Most Ignored Component</h2>
+
+<p>
+NIC (Network Interface Card) is how a VM or node connects to the network.
+</p>
+
+<ul>
+  <li>IP address belongs to NIC</li>
+  <li>NSG / Security Group attaches here</li>
+</ul>
+
+<div class="why">
+Why NIC exists:  
+VM without NIC = server without network cable.
+</div>
+</section>
+
+---
+
+<section>
+<h2>7. NSG / Security Group vs Routing Table</h2>
+
+<h3>NSG / Security Group</h3>
+<ul>
+  <li>Firewall</li>
+  <li>Allows or denies traffic</li>
+</ul>
+
+<h3>Routing Table</h3>
+<ul>
+  <li>Decides where traffic goes</li>
+  <li>Does NOT block traffic</li>
+</ul>
+
+<div class="interview">
+Easy memory:  
+NSG = security guard  
+Routing = GPS
+</div>
+</section>
+
+---
+
+<section>
+<h2>8. Internet Gateway vs NAT Gateway</h2>
+
+<h3>Internet Gateway</h3>
+<ul>
+  <li>Inbound + outbound</li>
+  <li>Public resources only</li>
+</ul>
+
+<h3>NAT Gateway</h3>
+<ul>
+  <li>Outbound only</li>
+  <li>Used by private workloads</li>
+</ul>
+
+<div class="why">
+Why NAT exists:  
+Private systems need updates but must not be exposed.
+</div>
+</section>
+
+---
+
+<section>
+<h2>9. Firewalls – Layered Security</h2>
+
+<ul>
+  <li>NSG / Security Group – VM level</li>
+  <li>Azure Firewall / Network Firewall – central control</li>
+  <li>WAF – application-level attacks</li>
+</ul>
+
+<div class="interview">
+Defense in depth, not one firewall.
+</div>
+</section>
+
+---
+
+<section>
+<h2>10. Application Gateway vs Front Door</h2>
+
+<h3>Application Gateway</h3>
+<ul>
+  <li>Regional</li>
+  <li>Inside VNet</li>
+  <li>L7 routing</li>
+</ul>
+
+<h3>Front Door</h3>
+<ul>
+  <li>Global edge service</li>
+  <li>CDN + TLS + routing</li>
+</ul>
+
+<div class="interview">
+Correct design:  
+Front Door → App Gateway → AKS
+</div>
+</section>
+
+---
+
+<section>
+<h2>11. VPN and ExpressRoute</h2>
+
+<h3>VPN</h3>
+<ul>
+  <li>Encrypted tunnel over internet</li>
+  <li>Cheap</li>
+</ul>
+
+<h3>ExpressRoute / Direct Connect</h3>
+<ul>
+  <li>Private physical connection</li>
+  <li>High bandwidth</li>
+  <li>Expensive</li>
+</ul>
+
+<div class="interview">
+Choose based on cost, latency, compliance.
+</div>
+</section>
+
+---
+
+<section>
+<h2>12. Final Interview Summary</h2>
+
+<p>
+Cloud networking is just on-prem networking implemented in software.
+Public traffic terminates at the edge, passes through WAF and load balancers,
+reaches private workloads, and accesses data via private endpoints.
+</p>
+</section>
+
+</body>
+</html>
