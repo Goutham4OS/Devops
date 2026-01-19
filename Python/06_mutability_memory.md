@@ -700,8 +700,7 @@ sys.getsizeof(obj)  # Memory size in bytes
 
 ## 🚀 Next Steps
 
-1. **Practice**: See [practice_04_memory_references.py](practice_04_memory_references.py)
-2. **Functions Deep Dive**: See [03_functions_basics.md](03_functions_basics.md)
-3. **OOP Concepts**: See [practice_03_oop.py](practice_03_oop.py)
+1. **Variables and Memory** → See [07_logging_exploration.md](07_logging_exploration.md)
+
 
 ````

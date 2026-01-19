@@ -460,6 +460,4 @@ print(generate_server_name("dev", "db", 5))    # dev-db-05
 ## Next Steps
 
 Learn about:
-1. **Working with Files** → `04_file_operations.md`
-2. **Error Handling** → `05_error_handling.md`
-3. **Loops and Conditions** → `06_loops_and_conditions.md`
+Modules → [04_modules_json_yaml.md](04_modules_json_yaml.md)

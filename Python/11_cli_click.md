@@ -993,7 +993,6 @@ if __name__ == "__main__":
 ## 🚀 Next Steps
 
 1. **Web Development** → See [12_devops_web_automation.md](12_devops_web_automation.md)
-2. **Build a CLI** → Create your own DevOps tool!
-3. **Practice** → See [practice_06_api_development.py](practice_06_api_development.py)
+
 
 ````

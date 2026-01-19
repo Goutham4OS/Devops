@@ -832,6 +832,5 @@ Practice with:
 4. Build a config validator script
 
 Check out:
-- `05_error_handling.md` - Handle file and parsing errors
-- `06_working_with_apis.md` - Make real API calls
-- `07_file_operations.md` - Advanced file handling
+1. **Everything is Object** → [05_everything_is_object.md](05_everything_is_object.md)
+

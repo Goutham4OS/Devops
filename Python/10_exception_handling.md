@@ -878,6 +878,6 @@ BaseException
 
 1. **CLI Development** → See [11_cli_click.md](11_cli_click.md)
 2. **Web Development** → See [12_devops_web_automation.md](12_devops_web_automation.md)
-3. **Practice** → See [practice_09_requests_server_disk.py](practice_09_requests_server_disk.py)
+
 
 ````

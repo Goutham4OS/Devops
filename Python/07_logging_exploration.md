@@ -713,9 +713,8 @@ type(some_object)
 ---
 
 ## 🚀 Next Steps
+ [08_azure_devops_modules](08_azure_devops_modules.md)
 
-1. **Exception Handling** → See [10_exception_handling.md](10_exception_handling.md)
-2. **CLI Development** → See [11_cli_click.md](11_cli_click.md)
-3. **Practice** → Add logging to your scripts!
+
 
 ````

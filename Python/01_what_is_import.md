@@ -302,7 +302,7 @@ print("Current time:", datetime.now())
 
 Now that you understand imports, let's learn about:
 1. **Variables and Data Types** → See [02_variables_and_types.md](02_variables_and_types.md)
-2. **Functions** → See [03_functions_basics.md](03_functions_basics.md)
-3. **Working with Files** → See [04_file_operations.md](04_file_operations.md)
+
+
 
 

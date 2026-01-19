@@ -679,10 +679,8 @@ help(list.append)
 
 ## 🚀 Next Steps
 
-Now that you understand Python's object model:
 1. **Variables and Memory** → See [06_mutability_memory.md](06_mutability_memory.md)
-2. **Functions as Objects** → See [03_functions_basics.md](03_functions_basics.md)
-3. **OOP Practice** → See [practice_03_oop.py](practice_03_oop.py)
+
 
 ````
 .
