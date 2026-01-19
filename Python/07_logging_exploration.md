@@ -1,4 +1,4 @@
-````markdown
+
 # 📝 Logging in Python - The Built-in "Batteries"
 
 ## Why Logging Over Print?
