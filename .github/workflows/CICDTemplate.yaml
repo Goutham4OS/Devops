@@ -1,0 +1,119 @@
+# ============================================================
+# Reusable CI/CD Template
+# Owned by Platform Team
+# Defines HOW applications are built and deployed
+# ============================================================
+
+name: Reusable App CI/CD Template
+
+# ------------------------------------------------------------
+# workflow_call makes this workflow reusable by other repos
+# ------------------------------------------------------------
+on:
+  workflow_call:
+
+    # ---------------------------
+    # Inputs = non-sensitive values
+    # Passed from app repositories
+    # ---------------------------
+    inputs:
+      service_name:
+        description: "Microservice name (used for image + k8s deployment)"
+        required: true
+        type: string
+
+      environment:
+        description: "Target environment (dev / prod)"
+        required: true
+        type: string
+
+      docker_context:
+        description: "Docker build context path"
+        required: false
+        type: string
+        default: "."
+
+    # ---------------------------
+    # Secrets = sensitive values
+    # Usually come from repo or environment secrets
+    # ---------------------------
+    secrets:
+      GCP_PROJECT_ID:
+        required: true
+      GCP_WIF_PROVIDER:
+        required: true
+      GCP_SERVICE_ACCOUNT:
+        required: true
+
+# ------------------------------------------------------------
+# Permissions required by THIS workflow
+# Caller permissions CANNOT override these
+# ------------------------------------------------------------
+permissions:
+  contents: read        # Needed to checkout code
+  id-token: write       # REQUIRED for OIDC (GitHub → GCP)
+
+jobs:
+  build-and-deploy:
+
+    # ---------------------------
+    # GitHub-hosted runner
+    # ---------------------------
+    runs-on: ubuntu-latest
+
+    # ---------------------------
+    # Environment enables:
+    # 1. Approval gates (prod)
+    # 2. Environment-level secrets
+    # ---------------------------
+    environment: ${{ inputs.environment }}
+
+    steps:
+      # --------------------------------------------------------
+      # Step 1: Checkout repository code
+      # --------------------------------------------------------
+      - name: Checkout source code
+        uses: actions/checkout@v4
+
+      # --------------------------------------------------------
+      # Step 2: Authenticate to GCP using OIDC
+      # No service account keys involved
+      # --------------------------------------------------------
+      - name: Authenticate to GCP (OIDC)
+        uses: google-github-actions/auth@v2
+        with:
+          workload_identity_provider: ${{ secrets.GCP_WIF_PROVIDER }}
+          service_account: ${{ secrets.GCP_SERVICE_ACCOUNT }}
+
+      # --------------------------------------------------------
+      # Step 3: Configure Docker to push to Artifact Registry
+      # --------------------------------------------------------
+      - name: Configure Docker authentication
+        run: |
+          gcloud auth configure-docker us-central1-docker.pkg.dev --quiet
+
+      # --------------------------------------------------------
+      # Step 4: Build Docker image
+      # github.sha is immutable → safe for rollback
+      # --------------------------------------------------------
+      - name: Build Docker image
+        run: |
+          docker build \
+            -t us-central1-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/apps/${{ inputs.service_name }}:${{ github.sha }} \
+            ${{ inputs.docker_context }}
+
+      # --------------------------------------------------------
+      # Step 5: Push Docker image to registry
+      # --------------------------------------------------------
+      - name: Push Docker image
+        run: |
+          docker push us-central1-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/apps/${{ inputs.service_name }}:${{ github.sha }}
+
+      # --------------------------------------------------------
+      # Step 6: Deploy to Kubernetes (example using kubectl)
+      # In real setups this could be Helm / ArgoCD
+      # --------------------------------------------------------
+      - name: Deploy to GKE
+        run: |
+          kubectl set image deployment/${{ inputs.service_name }} \
+            ${{ inputs.service_name }}=us-central1-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/apps/${{ inputs.service_name }}:${{ github.sha }}
