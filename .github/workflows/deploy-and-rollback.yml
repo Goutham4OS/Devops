@@ -1,0 +1,109 @@
+# ============================================================
+# CI/CD Deploy + Rollback Workflow
+# This is production-grade and interview-ready
+# ============================================================
+
+name: Deploy or Rollback to GKE
+
+# ------------------------------------------------------------
+# workflow_dispatch allows manual execution from GitHub UI
+# Useful for controlled rollbacks
+# ------------------------------------------------------------
+on:
+  workflow_dispatch:
+    inputs:
+      action:
+        description: "Choose deploy or rollback"
+        required: true
+        default: deploy
+        type: choice
+        options:
+          - deploy
+          - rollback
+
+      service_name:
+        description: "Kubernetes deployment name"
+        required: true
+        default: pricing
+        type: string
+
+      rollback_image:
+        description: |
+          Full image to rollback to.
+          Example:
+          us-central1-docker.pkg.dev/marketplace-prod/apps/pricing:3f2a9c7
+        required: false
+        type: string
+
+# ------------------------------------------------------------
+# Permissions required for OIDC authentication
+# ------------------------------------------------------------
+permissions:
+  contents: read
+  id-token: write   # REQUIRED for GitHub → GCP OIDC
+
+jobs:
+  deploy-or-rollback:
+
+    # --------------------------------------------------------
+    # Prod environment enables:
+    # - Manual approval
+    # - Environment secrets
+    # --------------------------------------------------------
+    environment: prod
+
+    runs-on: ubuntu-latest
+
+    steps:
+      # ------------------------------------------------------
+      # STEP 1: Authenticate to GCP using OIDC
+      # No service account keys are used
+      # ------------------------------------------------------
+      - name: Authenticate to GCP
+        uses: google-github-actions/auth@v2
+        with:
+          # Example value:
+          # projects/123456/locations/global/workloadIdentityPools/github/providers/github
+          workload_identity_provider: ${{ secrets.GCP_WIF_PROVIDER }}
+
+          # Example:
+          # pricing-ci@marketplace-prod.iam.gserviceaccount.com
+          service_account: ${{ secrets.GCP_SERVICE_ACCOUNT }}
+
+      # ------------------------------------------------------
+      # STEP 2: Decide whether this is DEPLOY or ROLLBACK
+      # ------------------------------------------------------
+      - name: Deploy new version (SHA-based)
+        if: inputs.action == 'deploy'
+        run: |
+          echo "Deploying new version using commit SHA"
+
+          # github.sha is the exact commit that triggered this workflow
+          # This guarantees immutable and traceable deployments
+          IMAGE="us-central1-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/apps/${{ inputs.service_name }}:${{ github.sha }}"
+
+          echo "Deploying image: $IMAGE"
+
+          kubectl set image deployment/${{ inputs.service_name }} \
+            ${{ inputs.service_name }}=$IMAGE
+
+      # ------------------------------------------------------
+      # STEP 3: Rollback to a previous image (manual rollback)
+      # ------------------------------------------------------
+      - name: Rollback to previous image
+        if: inputs.action == 'rollback'
+        run: |
+          echo "Rolling back deployment"
+
+          # Example rollback image:
+          # us-central1-docker.pkg.dev/marketplace-prod/apps/pricing:3f2a9c7
+          kubectl set image deployment/${{ inputs.service_name }} \
+            ${{ inputs.service_name }}=${{ inputs.rollback_image }}
+
+      # ------------------------------------------------------
+      # STEP 4: Verify rollout status
+      # This ensures deployment or rollback completed successfully
+      # ------------------------------------------------------
+      - name: Verify rollout
+        run: |
+          kubectl rollout status deployment/${{ inputs.service_name }} --timeout=180s
