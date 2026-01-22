@@ -117,3 +117,14 @@ jobs:
         run: |
           kubectl set image deployment/${{ inputs.service_name }} \
             ${{ inputs.service_name }}=us-central1-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/apps/${{ inputs.service_name }}:${{ github.sha }}
+  test:
+    runs-on: ubuntu-20.04
+    needs:
+      -  build-and-deploy
+    cancel-timeout-minutes: 10
+    steps:
+    - name: test
+      run: echo hello
+      timeout-minutes: 3
+     
+ 
