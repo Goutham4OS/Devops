@@ -1,6 +1,24 @@
-# CICD
-## What is CI CD
-[CICD](https://medium.com/@mavidev/a-complete-guide-to-ci-cd-continuous-integration-and-continuous-delivery-explained-8da11d5d1036#:~:text=What%20is%20CI/CD%3F,is%20deployed%20directly%20to%20production)
-<br>[CICD From CircleCI](https://circleci.com/blog/what-is-a-ci-cd-pipeline/)
-# Python
-[Python](./Python/01_what_is_import.md)
+# DevOps From Scratch
+
+Welcome to the DevOps learning path — from how computers start (CPU, memory, boot process) to cloud platforms and DevOps tooling.
+
+## Start Here
+- [Roadmap & Structure](./README.md)
+
+## Learning Sections (Planned)
+- Foundations (CPU, memory, storage, boot process)
+- Networking (TCP/IP, DNS, HTTP, TLS)
+- Linux & OS basics
+- Programming for Ops (Python)
+- Git & collaboration
+- Databases & data systems
+- Servers & web infrastructure
+- Containers & Docker
+- Kubernetes & orchestration
+- CI/CD pipelines
+- Observability (logs/metrics/traces)
+- Infrastructure as Code
+- Cloud fundamentals
+- Platform engineering
+- Security & DevSecOps
+- Projects & labs
