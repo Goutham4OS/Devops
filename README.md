@@ -2,6 +2,10 @@
 
 A structured path that starts from how computers work (CPU, memory, storage) and builds toward DevOps, platform engineering, and cloud tooling. This README is a **skeleton** for the future reorganization of the repository and for the GitHub Pages site.
 
+## 🧭 Start Here
+- [Roadmap (visual sketch + ordered path)](./roadmap.md)
+- [Navigation page (jump to any topic/file)](./index.md)
+
 ## ✅ Goals
 - Teach DevOps from the ground up: hardware → OS → networking → programming → systems → cloud → platform tools.
 - Provide a clear learning path with **short lessons**, **labs**, and **diagrams**.
