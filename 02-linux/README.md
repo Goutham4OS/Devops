@@ -66,25 +66,25 @@ flowchart LR
     <div class="path-step">01</div>
     <h3>Linux OS Introduction</h3>
     <p>Start with the runtime model before going into containers and cgroups.</p>
-    <p><a href="../basics/3.0.LinuxOSIntro.html">Open page</a></p>
+    <p><a href="../Basics/3.0.LinuxOSIntro.html">Open page</a></p>
   </div>
   <div class="path-card">
     <div class="path-step">02</div>
     <h3>Container Isolation Notes</h3>
     <p>Connect Linux primitives directly to container behavior.</p>
-    <p><a href="../basics/3.1.linux_container_isolation_notes.html">Open page</a></p>
+    <p><a href="../Basics/3.1.linux_container_isolation_notes.html">Open page</a></p>
   </div>
   <div class="path-card">
     <div class="path-step">03</div>
     <h3>Processes, Signals, Zombies, and OOM</h3>
     <p>Study the process lifecycle issues that often surface in production.</p>
-    <p><a href="../basics/3.2.0.linux_processes_signals_zombies_oom_docker_k8s.html">Open page</a></p>
+    <p><a href="../Basics/3.2.0.linux_processes_signals_zombies_oom_docker_k8s.html">Open page</a></p>
   </div>
   <div class="path-card">
     <div class="path-step">04</div>
     <h3>cgroups CPU and Memory Deep Dive</h3>
     <p>Go deeper into the resource controls that shape container performance.</p>
-    <p><a href="../basics/3.4.linux_cgroups_cpu_memory_deep_dive.html">Open page</a></p>
+    <p><a href="../Basics/3.4.linux_cgroups_cpu_memory_deep_dive.html">Open page</a></p>
   </div>
 </div>
 
@@ -93,3 +93,4 @@ flowchart LR
   <h3>Read Linux as a runtime model</h3>
   <p>Do not treat this section like a command catalog. Focus on process behavior, isolation, and resource control first because those ideas carry directly into containers and cloud operations.</p>
 </div>
+

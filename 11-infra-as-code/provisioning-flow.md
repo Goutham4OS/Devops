@@ -25,9 +25,9 @@ flowchart LR
 ## Current source material
 
 - [terraform/main.tf](../terraform/main.tf)
-- [terraform/modules/acr](../terraform/modules/acr/)
-- [terraform/modules/aks](../terraform/modules/aks/)
-- [terraform/modules/vnet](../terraform/modules/vnet/)
+- [terraform/modules/acr/main.tf](../terraform/modules/acr/main.tf)
+- [terraform/modules/aks/main.tf](../terraform/modules/aks/main.tf)
+- [terraform/modules/vnet/main.tf](../terraform/modules/vnet/main.tf)
 
 ## What to deepen next
 

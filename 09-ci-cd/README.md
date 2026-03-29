@@ -72,19 +72,19 @@ flowchart LR
     <div class="path-step">02</div>
     <h3>CI Foundations</h3>
     <p>Review the conceptual pipeline model before deeper enterprise examples.</p>
-    <p><a href="../basics/6.0.0.CI.html">Open page</a></p>
+    <p><a href="../Basics/6.0.0.CI.html">Open page</a></p>
   </div>
   <div class="path-card">
     <div class="path-step">03</div>
     <h3>Continuous Delivery and Deployment</h3>
     <p>Study the promotion path from successful builds to controlled release.</p>
-    <p><a href="../basics/CI/2.continuous_delivery_deployment_wiki.html">Open page</a></p>
+    <p><a href="../Basics/CI/2.continuous_delivery_deployment_wiki.html">Open page</a></p>
   </div>
   <div class="path-card">
     <div class="path-step">04</div>
     <h3>Enterprise GitHub Actions Project</h3>
     <p>See how the model works in a more realistic enterprise-scale example.</p>
-    <p><a href="../basics/CD/Github/Enterprise_CICD_GitHubActions_OIDC_Kubernetes_Project.html">Open page</a></p>
+    <p><a href="../Basics/CD/Github/Enterprise_CICD_GitHubActions_OIDC_Kubernetes_Project.html">Open page</a></p>
   </div>
 </div>
 
@@ -93,3 +93,4 @@ flowchart LR
   <h3>Read pipelines as systems, not only YAML</h3>
   <p>Focus on trust boundaries, promotion points, rollback paths, and runtime verification. Those ideas matter more than the exact CI tool syntax.</p>
 </div>
+

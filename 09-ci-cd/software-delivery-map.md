@@ -1,4 +1,4 @@
----
+﻿---
 title: 'Software Delivery Map'
 ---
 
@@ -53,13 +53,14 @@ flowchart LR
 
 ## Current source material
 
-- [basics/CI/1.ci_foundations_remember.md](../basics/CI/1.ci_foundations_remember.html)
-- [basics/CD/Github/CI_CD_Architecture_SAP_Scale.md](../basics/CD/Github/CI_CD_Architecture_SAP_Scale.html)
-- [basics/CD/Github/ci_cd_security_sap_scale_wiki.md](../basics/CD/Github/ci_cd_security_sap_scale_wiki.html)
-- [.github/workflows](../.github/workflows/)
+- [basics/CI/1.ci_foundations_remember.md](../Basics/CI/1.ci_foundations_remember.html)
+- [basics/CD/Github/CI_CD_Architecture_SAP_Scale.md](../Basics/CD/Github/CI_CD_Architecture_SAP_Scale.html)
+- [basics/CD/Github/ci_cd_security_sap_scale_wiki.md](../Basics/CD/Github/ci_cd_security_sap_scale_wiki.html)
+- [GitHub Actions workflow examples](../.github/workflows/ci.yml)
 
 ## What to deepen next
 
 1. A dedicated page for Git and PR best practices.
 2. A dedicated DevSecOps page for SBOM, signing, and policy enforcement.
 3. A delivery decision tree for GitHub Actions, Azure DevOps, and GitOps.
+

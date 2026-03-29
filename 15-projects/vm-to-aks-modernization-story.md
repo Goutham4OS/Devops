@@ -1,4 +1,4 @@
----
+﻿---
 title: 'Real Story: From VMs to AKS and Platform Operations'
 ---
 
@@ -342,15 +342,15 @@ Build on platform and runtime knowledge, then deepen into:
 ## What this repo already contains for the rewrite
 
 This story is based on material already present in the repository, including:
-- [basics/1.AgileScrumDevops.md](../basics/1.AgileScrumDevops.html)
-- [basics/2.Platformengineering.md](../basics/2.Platformengineering.html)
-- [basics/CD/Github/CI_CD_Architecture_SAP_Scale.md](../basics/CD/Github/CI_CD_Architecture_SAP_Scale.html)
-- [basics/CD/Github/large_scale_ci_cd_enablement_on_prem_to_cloud_migration_sap_interview_prep.md](../basics/CD/Github/large_scale_ci_cd_enablement_on_prem_to_cloud_migration_sap_interview_prep.html)
+- [basics/1.AgileScrumDevops.md](../Basics/1.AgileScrumDevops.html)
+- [basics/2.Platformengineering.md](../Basics/2.Platformengineering.html)
+- [basics/CD/Github/CI_CD_Architecture_SAP_Scale.md](../Basics/CD/Github/CI_CD_Architecture_SAP_Scale.html)
+- [basics/CD/Github/large_scale_ci_cd_enablement_on_prem_to_cloud_migration_sap_interview_prep.md](../Basics/CD/Github/large_scale_ci_cd_enablement_on_prem_to_cloud_migration_sap_interview_prep.html)
 - [K8s/K8s.md](../K8s/K8s.html)
 - [onprem/MigrationMM.md](../onprem/MigrationMM.html)
 - [cloud-networking/Networking.html](../cloud-networking/Networking.html)
 - [DB/comparisiontable.md](../DB/comparisiontable.html)
-- [basics/4.3postgre_sql_on_kubernetes_vs_azure_managed_postgres_platform_guide.md](../basics/4.3postgre_sql_on_kubernetes_vs_azure_managed_postgres_platform_guide.html)
+- [basics/4.3postgre_sql_on_kubernetes_vs_azure_managed_postgres_platform_guide.md](../Basics/4.3postgre_sql_on_kubernetes_vs_azure_managed_postgres_platform_guide.html)
 
 ## Recommended next pages
 
@@ -358,3 +358,4 @@ This story is based on material already present in the repository, including:
 2. [DevOps to Platform to SRE learning journey](./devops-platform-sre-learning-journey.html)
 3. [Software delivery map](../09-ci-cd/software-delivery-map.html)
 4. [Internal developer platform](../13-platform-engineering/internal-developer-platform.html)
+

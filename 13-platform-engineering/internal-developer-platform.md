@@ -1,4 +1,4 @@
----
+﻿---
 title: 'Internal Developer Platform'
 ---
 
@@ -28,7 +28,7 @@ flowchart LR
 
 ## Current source material
 
-- [basics/2.Platformengineering.md](../basics/2.Platformengineering.html)
+- [basics/2.Platformengineering.md](../Basics/2.Platformengineering.html)
 - [software delivery map](../09-ci-cd/software-delivery-map.html)
 - [observability and SRE loop](../10-observability/observability-and-sre-loop.html)
 
@@ -37,3 +37,4 @@ flowchart LR
 1. Platform personas: application team, platform team, security team, SRE.
 2. Backstage or internal portal style workflows.
 3. Paved-road templates for services, CI/CD, observability, and security.
+

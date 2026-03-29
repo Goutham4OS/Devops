@@ -72,13 +72,13 @@ flowchart LR
     <div class="path-step">02</div>
     <h3>Privileged Containers Threat Model</h3>
     <p>Connect container runtime behavior to real security boundaries.</p>
-    <p><a href="../basics/3.3.privileged_containers_threat_model.html">Open page</a></p>
+    <p><a href="../Basics/3.3.privileged_containers_threat_model.html">Open page</a></p>
   </div>
   <div class="path-card">
     <div class="path-step">03</div>
     <h3>CI CD Security at Scale</h3>
     <p>See how enterprise delivery systems become security control points.</p>
-    <p><a href="../basics/CD/Github/ci_cd_security_sap_scale_wiki.html">Open page</a></p>
+    <p><a href="../Basics/CD/Github/ci_cd_security_sap_scale_wiki.html">Open page</a></p>
   </div>
   <div class="path-card">
     <div class="path-step">04</div>
@@ -93,3 +93,4 @@ flowchart LR
   <h3>Treat security as an operating model</h3>
   <p>The most useful reading habit here is to ask how trust is maintained from commit to runtime. That keeps security grounded in platform behavior instead of turning it into a disconnected checklist.</p>
 </div>
+

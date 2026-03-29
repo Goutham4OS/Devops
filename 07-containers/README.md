@@ -72,19 +72,19 @@ flowchart LR
     <div class="path-step">02</div>
     <h3>Docker</h3>
     <p>Study the image, container, and workflow model most teams encounter first.</p>
-    <p><a href="../basics/3.docker.html">Open page</a></p>
+    <p><a href="../Basics/3.docker.html">Open page</a></p>
   </div>
   <div class="path-card">
     <div class="path-step">03</div>
     <h3>Container Isolation Notes</h3>
     <p>Connect containers back to Linux primitives so the runtime is less mysterious.</p>
-    <p><a href="../basics/3.1.linux_container_isolation_notes.html">Open page</a></p>
+    <p><a href="../Basics/3.1.linux_container_isolation_notes.html">Open page</a></p>
   </div>
   <div class="path-card">
     <div class="path-step">04</div>
     <h3>OverlayFS</h3>
     <p>Understand how layered filesystems affect build speed and runtime behavior.</p>
-    <p><a href="../basics/3.2.OverlayFS.html">Open page</a></p>
+    <p><a href="../Basics/3.2.OverlayFS.html">Open page</a></p>
   </div>
 </div>
 
@@ -93,3 +93,4 @@ flowchart LR
   <h3>Read containers as both package and runtime</h3>
   <p>Do not stop at build and run commands. The real value comes when you connect image design, isolation, filesystems, and security posture to the environments where the workloads actually live.</p>
 </div>
+
