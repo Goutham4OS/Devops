@@ -1,0 +1,8 @@
+location            = "East US 2"
+resource_group_name = "rg-stage"
+vnet_name           = "vnet-stage"
+subnet_name         = "subnet-aks"
+acr_name            = "acrstage"
+aks_name            = "aks-stage"
+log_workspace_name  = "log-stage"
+tm_name             = "tm-stage"
