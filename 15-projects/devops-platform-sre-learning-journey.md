@@ -1,4 +1,8 @@
-﻿# DevOps to Platform to SRE Learning Journey
+---
+title: 'DevOps to Platform to SRE Learning Journey'
+---
+
+# DevOps to Platform to SRE Learning Journey
 
 This page explains how to grow from basics to advanced work without skipping the foundations.
 
@@ -16,11 +20,11 @@ This page explains how to grow from basics to advanced work without skipping the
 These topics explain what actually happens under VMs, containers, cloud runtimes, and CI/CD systems.
 
 ### Repo anchors
-- [00-foundations](../00-foundations/README.md)
-- [01-networking](../01-networking/README.md)
-- [02-linux](../02-linux/README.md)
-- [03-programming](../03-programming/README.md)
-- [04-git](../04-git/README.md)
+- [00-foundations](../00-foundations/README.html)
+- [01-networking](../01-networking/README.html)
+- [02-linux](../02-linux/README.html)
+- [03-programming](../03-programming/README.html)
+- [04-git](../04-git/README.html)
 
 ## Stage 2: Become a solid DevOps engineer
 
@@ -37,11 +41,11 @@ These topics explain what actually happens under VMs, containers, cloud runtimes
 This is where you stop operating servers manually and start designing reliable delivery systems.
 
 ### Repo anchors
-- [07-containers](../07-containers/README.md)
-- [09-ci-cd](../09-ci-cd/README.md)
-- [11-infra-as-code](../11-infra-as-code/README.md)
-- [12-cloud](../12-cloud/README.md)
-- [10-observability](../10-observability/README.md)
+- [07-containers](../07-containers/README.html)
+- [09-ci-cd](../09-ci-cd/README.html)
+- [11-infra-as-code](../11-infra-as-code/README.html)
+- [12-cloud](../12-cloud/README.html)
+- [10-observability](../10-observability/README.html)
 
 ## Stage 3: Move into cloud and platform engineering
 
@@ -58,10 +62,10 @@ This is where you stop operating servers manually and start designing reliable d
 This is the shift from operating single workloads to building a platform other teams can trust.
 
 ### Repo anchors
-- [Cloud architecture and well-architected review](../12-cloud/cloud-architecture-and-well-architected.md)
-- [08-orchestration](../08-orchestration/README.md)
-- [11-infra-as-code](../11-infra-as-code/README.md)
-- [13-platform-engineering](../13-platform-engineering/README.md)
+- [Cloud architecture and well-architected review](../12-cloud/cloud-architecture-and-well-architected.html)
+- [08-orchestration](../08-orchestration/README.html)
+- [11-infra-as-code](../11-infra-as-code/README.html)
+- [13-platform-engineering](../13-platform-engineering/README.html)
 
 ## Stage 4: Grow into SRE thinking
 
@@ -78,9 +82,9 @@ This is the shift from operating single workloads to building a platform other t
 The platform is not successful just because it deploys. It is successful when production behavior is measurable, supportable, and resilient.
 
 ### Repo anchors
-- [10-observability](../10-observability/README.md)
-- [observability-and-sre-loop.md](../10-observability/observability-and-sre-loop.md)
-- [vm-to-aks-modernization-story.md](./vm-to-aks-modernization-story.md)
+- [10-observability](../10-observability/README.html)
+- [observability-and-sre-loop.md](../10-observability/observability-and-sre-loop.html)
+- [vm-to-aks-modernization-story.md](./vm-to-aks-modernization-story.html)
 
 ## Role view
 

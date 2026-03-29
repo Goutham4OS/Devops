@@ -1,3 +1,7 @@
+---
+title: 'Large-scale CI/CD Enablement & On-Prem to Cloud Migration'
+---
+
 # Large-scale CI/CD Enablement & On-Prem to Cloud Migration
 
 This document explains **how to enable large-scale CI/CD** and **how to automate on‑premises to cloud migration**, aligned with SAP’s Senior DevOps Engineer JD. It is written in interview-ready language with architectural thinking.

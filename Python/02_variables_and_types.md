@@ -1,3 +1,7 @@
+---
+title: '📦 Variables and Data Types - Building Blocks'
+---
+
 # 📦 Variables and Data Types - Building Blocks
 
 ## What is a Variable?
@@ -398,4 +402,4 @@ for server in servers:
 
 ## Next Step
 
-Ready for **functions**? → See [03_functions_basics.md](03_functions_basics.md)
+Ready for **functions**? → See [03_functions_basics.md](03_functions_basics.html)

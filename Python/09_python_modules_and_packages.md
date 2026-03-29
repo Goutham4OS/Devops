@@ -1,3 +1,7 @@
+---
+title: 'Python Modules & Packages: Complete Guide'
+---
+
 # Python Modules & Packages: Complete Guide
 
 Understanding how to create, organize, and use Python modules and packages.

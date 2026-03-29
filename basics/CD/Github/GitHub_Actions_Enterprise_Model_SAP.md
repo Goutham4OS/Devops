@@ -1,3 +1,7 @@
+---
+title: 'GitHub Actions – Enterprise, Organization, and Platform Model (SAP-Scale)'
+---
+
 
 # GitHub Actions – Enterprise, Organization, and Platform Model (SAP-Scale)
 

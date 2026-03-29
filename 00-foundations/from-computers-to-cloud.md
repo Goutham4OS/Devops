@@ -1,4 +1,8 @@
-﻿# From Computers to Cloud
+---
+title: 'From Computers to Cloud'
+---
+
+# From Computers to Cloud
 
 This page is the foundation story for the whole repository.
 
@@ -28,7 +32,7 @@ flowchart LR
 - [CS/Machines to computers](../CS/Machines%20to%20computers/)
 - [CS/Disk](../CS/Disk/)
 - [CS/Virtual_Memory](../CS/Virtual_Memory/)
-- [basics/3.0.LinuxOSIntro.md](../basics/3.0.LinuxOSIntro.md)
+- [basics/3.0.LinuxOSIntro.md](../basics/3.0.LinuxOSIntro.html)
 
 ## What to build next
 

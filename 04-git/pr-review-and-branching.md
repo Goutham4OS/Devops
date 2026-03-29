@@ -1,4 +1,8 @@
-﻿# PR Review and Branching
+---
+title: 'PR Review and Branching'
+---
+
+# PR Review and Branching
 
 This page gives a practical high-level view of how work should move before CI/CD starts.
 
@@ -22,7 +26,7 @@ flowchart LR
 
 ## Reading order
 
-1. [todo/05-version-control-before-git.todo.md](../todo/05-version-control-before-git.todo.md)
-2. [Git/git.md](../Git/git.md)
-3. [Git/git-branching-strategy.md](../Git/git-branching-strategy.md)
-4. [Git/git-visualize.md](../Git/git-visualize.md)
+1. [todo/05-version-control-before-git.todo.md](../todo/05-version-control-before-git.todo.html)
+2. [Git/git.md](../Git/git.html)
+3. [Git/git-branching-strategy.md](../Git/git-branching-strategy.html)
+4. [Git/git-visualize.md](../Git/git-visualize.html)

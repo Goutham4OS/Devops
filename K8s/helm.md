@@ -1,3 +1,7 @@
+---
+title: 'Helm Templating Decision Guide & Function Reference'
+---
+
 {% raw %}
 1.toYaml what we call?
 

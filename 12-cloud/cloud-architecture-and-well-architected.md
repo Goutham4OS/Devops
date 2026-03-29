@@ -1,4 +1,8 @@
-﻿# Cloud Architecture and Well-Architected Review
+---
+title: 'Cloud Architecture and Well-Architected Review'
+---
+
+# Cloud Architecture and Well-Architected Review
 
 This page explains what cloud architecture means in practical DevOps and platform terms.
 
@@ -131,10 +135,10 @@ Watch out for:
 
 ## Recommended reading order in this repo
 
-1. [runtime-edge-traffic-path.md](./runtime-edge-traffic-path.md)
-2. [acr-and-runtime-promotion.md](./acr-and-runtime-promotion.md)
-3. [provisioning-flow.md](../11-infra-as-code/provisioning-flow.md)
-4. [vm-to-aks-modernization-story.md](../15-projects/vm-to-aks-modernization-story.md)
-5. [onprem/MigrationMM.md](../onprem/MigrationMM.md)
+1. [runtime-edge-traffic-path.md](./runtime-edge-traffic-path.html)
+2. [acr-and-runtime-promotion.md](./acr-and-runtime-promotion.html)
+3. [provisioning-flow.md](../11-infra-as-code/provisioning-flow.html)
+4. [vm-to-aks-modernization-story.md](../15-projects/vm-to-aks-modernization-story.html)
+5. [onprem/MigrationMM.md](../onprem/MigrationMM.html)
 6. [cloud-networking/Networking.html](../cloud-networking/Networking.html)
-7. [DB/comparisiontable.md](../DB/comparisiontable.md)
+7. [DB/comparisiontable.md](../DB/comparisiontable.html)

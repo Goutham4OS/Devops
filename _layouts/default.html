@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+  <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | escape }}">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap');
+    :root {
+      --bg: #050505;
+      --paper: rgba(14, 16, 20, 0.88);
+      --paper-2: rgba(20, 23, 29, 0.96);
+      --ink: #f7f7f2;
+      --muted: #a7b0bb;
+      --line: rgba(255, 255, 255, 0.1);
+      --accent: #2dd4bf;
+      --accent-2: #60a5fa;
+      --code: #0c1117;
+      --shadow: 0 24px 80px rgba(0, 0, 0, 0.38);
+      --max: 1080px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(45, 212, 191, 0.16), transparent 28%),
+        radial-gradient(circle at top right, rgba(96, 165, 250, 0.14), transparent 24%),
+        linear-gradient(180deg, #070707 0%, #0d1015 100%);
+      font-family: 'IBM Plex Sans', sans-serif;
+      line-height: 1.7;
+    }
+    a { color: var(--accent-2); text-decoration: none; }
+    a:hover { color: var(--accent); }
+    .shell { max-width: var(--max); margin: 0 auto; padding: 24px 18px 72px; }
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(12px);
+      background: rgba(5, 5, 5, 0.78);
+      border-bottom: 1px solid var(--line);
+    }
+    .topbar-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 12px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .brand {
+      color: var(--ink);
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+    }
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .nav a {
+      display: inline-flex;
+      align-items: center;
+      padding: 9px 12px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--ink);
+      background: rgba(255, 255, 255, 0.03);
+      font-size: 14px;
+      font-weight: 600;
+    }
+    .hero {
+      margin-top: 24px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      padding: 24px;
+      box-shadow: var(--shadow);
+    }
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 12px;
+      color: var(--accent);
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .hero h1, .content h1, .content h2, .content h3 {
+      font-family: 'Space Grotesk', sans-serif;
+    }
+    .hero h1 {
+      margin: 0;
+      font-size: clamp(28px, 4vw, 44px);
+      line-height: 1.08;
+    }
+    .hero p {
+      margin: 12px 0 0;
+      color: var(--muted);
+      max-width: 760px;
+    }
+    .hero-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 18px;
+    }
+    .hero-links a {
+      display: inline-flex;
+      align-items: center;
+      padding: 10px 14px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.04);
+      color: var(--ink);
+      font-weight: 600;
+    }
+    .content {
+      margin-top: 24px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      padding: 26px;
+      box-shadow: var(--shadow);
+      overflow-wrap: anywhere;
+    }
+    .content > :first-child { margin-top: 0; }
+    .content > h1:first-child { display: none; }
+    .content h1 { font-size: clamp(28px, 3.8vw, 42px); line-height: 1.12; }
+    .content h2 {
+      margin-top: 34px;
+      padding-top: 10px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      font-size: 28px;
+    }
+    .content h3 { font-size: 22px; margin-top: 26px; }
+    .content p, .content li, .content blockquote { color: #d7dee7; }
+    .content ul, .content ol { padding-left: 24px; }
+    .content li + li { margin-top: 6px; }
+    .content blockquote {
+      margin: 20px 0;
+      padding: 14px 18px;
+      border-left: 3px solid var(--accent);
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 0 16px 16px 0;
+    }
+    .content code {
+      font-family: Consolas, 'Courier New', monospace;
+      font-size: 0.94em;
+      background: rgba(255, 255, 255, 0.06);
+      padding: 0.18em 0.38em;
+      border-radius: 6px;
+    }
+    .content pre {
+      background: var(--code);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 18px;
+      overflow: auto;
+    }
+    .content pre code {
+      background: transparent;
+      padding: 0;
+      border-radius: 0;
+    }
+    .content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 22px 0;
+      overflow: hidden;
+      border-radius: 14px;
+      border: 1px solid var(--line);
+    }
+    .content th, .content td {
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+      vertical-align: top;
+    }
+    .content th {
+      color: var(--ink);
+      background: rgba(255, 255, 255, 0.05);
+    }
+    .content tr:last-child td { border-bottom: 0; }
+    .content hr {
+      border: 0;
+      border-top: 1px solid var(--line);
+      margin: 28px 0;
+    }
+    .content img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 16px;
+    }
+    .footer {
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 14px;
+      text-align: center;
+    }
+    .mermaid {
+      display: block;
+      background: var(--code);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 16px;
+      overflow: auto;
+    }
+    @media (max-width: 820px) {
+      .topbar-inner { align-items: flex-start; flex-direction: column; }
+      .shell { padding: 18px 14px 56px; }
+      .hero, .content { border-radius: 22px; padding: 20px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="{{ '/index.html' | relative_url }}">DevOps From Scratch</a>
+      <nav class="nav">
+        <a href="{{ '/index.html' | relative_url }}">Journey Map</a>
+        <a href="{{ '/navigation.html' | relative_url }}">Navigation Hub</a>
+        <a href="{{ '/roadmap.html' | relative_url }}">Roadmap</a>
+        <a href="{{ '/migration-map.html' | relative_url }}">Migration Map</a>
+      </nav>
+    </div>
+  </header>
+  <main class="shell">
+    <section class="hero">
+      <div class="eyebrow">DevOps, Cloud, SRE, Platform Engineering</div>
+      <h1>{{ page.title | default: page.name | replace: '.md', '' | replace: '-', ' ' }}</h1>
+      <p>{{ page.excerpt | default: site.description | strip_html | normalize_whitespace }}</p>
+      <div class="hero-links">
+        <a href="{{ '/index.html' | relative_url }}">Journey Map</a>
+        <a href="{{ '/navigation.html' | relative_url }}">Navigation Hub</a>
+        <a href="{{ '/README.html' | relative_url }}">Repository Guide</a>
+      </div>
+    </section>
+    <article class="content">
+      {{ content }}
+    </article>
+    <div class="footer">
+      Built with Jekyll so markdown pages render as full site pages on GitHub Pages.
+    </div>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      document.querySelectorAll('pre code.language-mermaid').forEach(function (code) {
+        var pre = code.parentElement;
+        var block = document.createElement('div');
+        block.className = 'mermaid';
+        block.textContent = code.textContent;
+        pre.replaceWith(block);
+      });
+      if (window.mermaid) {
+        mermaid.initialize({ startOnLoad: false, theme: 'dark', securityLevel: 'loose' });
+        mermaid.run({ querySelector: '.mermaid' });
+      }
+    });
+  </script>
+</body>
+</html>

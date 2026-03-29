@@ -1,4 +1,8 @@
-﻿# Internal Developer Platform
+---
+title: 'Internal Developer Platform'
+---
+
+# Internal Developer Platform
 
 Platform engineering is how we turn repeated operational knowledge into a product for internal teams.
 
@@ -24,9 +28,9 @@ flowchart LR
 
 ## Current source material
 
-- [basics/2.Platformengineering.md](../basics/2.Platformengineering.md)
-- [software delivery map](../09-ci-cd/software-delivery-map.md)
-- [observability and SRE loop](../10-observability/observability-and-sre-loop.md)
+- [basics/2.Platformengineering.md](../basics/2.Platformengineering.html)
+- [software delivery map](../09-ci-cd/software-delivery-map.html)
+- [observability and SRE loop](../10-observability/observability-and-sre-loop.html)
 
 ## What to deepen next
 

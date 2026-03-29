@@ -1,3 +1,7 @@
+---
+title: 'CI/CD Scalability & Reliability – Enterprise Wiki'
+---
+
 # CI/CD Scalability & Reliability – Enterprise Wiki
 
 ## Purpose

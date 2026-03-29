@@ -1,4 +1,8 @@
-﻿# DevSecOps Supply Chain
+---
+title: 'DevSecOps Supply Chain'
+---
+
+# DevSecOps Supply Chain
 
 This page keeps the delivery security story at a high level for now, while pointing to the places that need more detail later.
 
@@ -25,6 +29,6 @@ flowchart LR
 
 ## Source material to merge
 
-- [basics/3.3.privileged_containers_threat_model.md](../basics/3.3.privileged_containers_threat_model.md)
-- [basics/CD/Github/ci_cd_security_sap_scale_wiki.md](../basics/CD/Github/ci_cd_security_sap_scale_wiki.md)
-- [software-delivery-map.md](../09-ci-cd/software-delivery-map.md)
+- [basics/3.3.privileged_containers_threat_model.md](../basics/3.3.privileged_containers_threat_model.html)
+- [basics/CD/Github/ci_cd_security_sap_scale_wiki.md](../basics/CD/Github/ci_cd_security_sap_scale_wiki.html)
+- [software-delivery-map.md](../09-ci-cd/software-delivery-map.html)

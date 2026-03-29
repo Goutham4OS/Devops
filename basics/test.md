@@ -1,3 +1,7 @@
+---
+title: 'test'
+---
+
 ```mermaid
 flowchart LR
     User((👤 User))

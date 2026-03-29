@@ -1,11 +1,15 @@
-﻿# Networking
+---
+title: 'Networking'
+---
+
+# Networking
 
 Connectivity, routing, DNS, TLS, and the traffic patterns behind modern platforms.
 
 ## Recommended reading order
 
-1. [edge-routing-decision-map.md](./edge-routing-decision-map.md)
-2. [runtime-edge-traffic-path.md](../12-cloud/runtime-edge-traffic-path.md)
+1. [edge-routing-decision-map.md](./edge-routing-decision-map.html)
+2. [runtime-edge-traffic-path.md](../12-cloud/runtime-edge-traffic-path.html)
 3. [cloud-networking/Networking.html](../cloud-networking/Networking.html)
 4. [cloud-networking/Networking2.html](../cloud-networking/Networking2.html)
 

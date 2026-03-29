@@ -1,3 +1,7 @@
+---
+title: '📝 Logging in Python - The Built-in "Batteries"'
+---
+
 
 # 📝 Logging in Python - The Built-in "Batteries"
 
@@ -713,7 +717,7 @@ type(some_object)
 ---
 
 ## 🚀 Next Steps
- [08_azure_devops_modules](08_azure_devops_modules.md)
+ [08_azure_devops_modules](08_azure_devops_modules.html)
 
 
 

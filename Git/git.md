@@ -1,3 +1,7 @@
+---
+title: 'Git Internals: Complete Guide From Scratch'
+---
+
 # Git Internals: Complete Guide From Scratch
 
 ## Table of Contents

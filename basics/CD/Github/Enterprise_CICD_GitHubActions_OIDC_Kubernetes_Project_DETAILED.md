@@ -1,4 +1,8 @@
+---
+title: 'Enterprise CI/CD Platform Project (Deep Dive)'
+---
 
+{% raw %}
 # Enterprise CI/CD Platform Project (Deep Dive)
 ## GitHub Actions + Permissions + Environments + OIDC + Kubernetes
 
@@ -146,3 +150,5 @@ flowchart TB
 ## Final Note
 
 This setup removes secrets and enforces identity-based access.
+
+{% endraw %}

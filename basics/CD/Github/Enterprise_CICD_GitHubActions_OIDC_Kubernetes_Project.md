@@ -1,4 +1,8 @@
+---
+title: 'Enterprise CI/CD Project – GitHub Actions + OIDC + Kubernetes (Hands-on)'
+---
 
+{% raw %}
 # Enterprise CI/CD Project – GitHub Actions + OIDC + Kubernetes (Hands-on)
 
 ## Project Context
@@ -167,3 +171,5 @@ Prod requires approval and OIDC.
 ## Final Note
 
 This model removes secrets, enforces identity, and scales safely.
+
+{% endraw %}

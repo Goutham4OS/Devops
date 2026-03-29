@@ -1,4 +1,8 @@
-﻿# DevOps From Scratch
+---
+title: 'DevOps From Scratch'
+---
+
+# DevOps From Scratch
 
 This repository is becoming a story-first learning platform for DevOps, Cloud, SRE, and Platform Engineering.
 
@@ -11,11 +15,11 @@ The direction is simple:
 ## Start Here
 
 - [Interactive journey map](./index.html)
-- [Navigation hub](./index.md)
-- [Real story: from VMs to AKS and platform operations](./15-projects/vm-to-aks-modernization-story.md)
-- [Roadmap](./roadmap.md)
-- [Migration map](./migration-map.md)
-- [Diagram library](./assets/diagrams/README.md)
+- [Navigation hub](./navigation.html)
+- [Real story: from VMs to AKS and platform operations](./15-projects/vm-to-aks-modernization-story.html)
+- [Roadmap](./roadmap.html)
+- [Migration map](./migration-map.html)
+- [Diagram library](./assets/diagrams/README.html)
 
 ## Target Information Architecture
 

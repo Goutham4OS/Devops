@@ -1,3 +1,7 @@
+---
+title: 'Git Branching Strategies - Complete Visual Guide'
+---
+
 # Git Branching Strategies - Complete Visual Guide
 
 > 🎯 **Purpose**: Easy-to-understand guide with visual diagrams for choosing and implementing Git branching strategies

@@ -1,4 +1,8 @@
-﻿# Observability and SRE Loop
+---
+title: 'Observability and SRE Loop'
+---
+
+# Observability and SRE Loop
 
 Operations do not end at deployment. This is the feedback loop that keeps systems reliable.
 

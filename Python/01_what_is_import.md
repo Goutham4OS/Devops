@@ -1,3 +1,7 @@
+---
+title: '🔌 Understanding Python Imports - The Absolute Basics'
+---
+
 # 🔌 Understanding Python Imports - The Absolute Basics
 
 ## What is `import`?
@@ -301,7 +305,7 @@ print("Current time:", datetime.now())
 ## Next Steps
 
 Now that you understand imports, let's learn about:
-1. **Variables and Data Types** → See [02_variables_and_types.md](02_variables_and_types.md)
+1. **Variables and Data Types** → See [02_variables_and_types.md](02_variables_and_types.html)
 
 
 

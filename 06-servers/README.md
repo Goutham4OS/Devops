@@ -1,4 +1,8 @@
-﻿# Servers
+---
+title: 'Servers'
+---
+
+# Servers
 
 The web serving layer, reverse proxies, ingress, and north-south traffic handling.
 
@@ -11,8 +15,8 @@ The web serving layer, reverse proxies, ingress, and north-south traffic handlin
 
 ## Current source material
 
-- [Server/WebServer/Ngnix.md](../Server/WebServer/Ngnix.md)
-- [runtime and edge traffic path](../12-cloud/runtime-edge-traffic-path.md)
+- [Server/WebServer/Ngnix.md](../Server/WebServer/Ngnix.html)
+- [runtime and edge traffic path](../12-cloud/runtime-edge-traffic-path.html)
 
 ## Rebuild intent
 

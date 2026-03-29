@@ -1,3 +1,7 @@
+---
+title: '⚠️ Exception Handling - Building Resilient Applications'
+---
+
 ````markdown
 # ⚠️ Exception Handling - Building Resilient Applications
 
@@ -876,8 +880,8 @@ BaseException
 
 ## 🚀 Next Steps
 
-1. **CLI Development** → See [11_cli_click.md](11_cli_click.md)
-2. **Web Development** → See [12_devops_web_automation.md](12_devops_web_automation.md)
+1. **CLI Development** → See [11_cli_click.md](11_cli_click.html)
+2. **Web Development** → See [12_devops_web_automation.md](12_devops_web_automation.html)
 
 
 ````

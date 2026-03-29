@@ -1,4 +1,8 @@
-﻿# Edge Routing Decision Map
+---
+title: 'Edge Routing Decision Map'
+---
+
+# Edge Routing Decision Map
 
 This page explains the north-south path at a tool-choice level without going too deep yet.
 
@@ -25,6 +29,6 @@ flowchart LR
 
 ## Current references
 
-- [runtime-edge-traffic-path.md](../12-cloud/runtime-edge-traffic-path.md)
+- [runtime-edge-traffic-path.md](../12-cloud/runtime-edge-traffic-path.html)
 - [cloud-networking/Networking.html](../cloud-networking/Networking.html)
-- [Server/WebServer/Ngnix.md](../Server/WebServer/Ngnix.md)
+- [Server/WebServer/Ngnix.md](../Server/WebServer/Ngnix.html)

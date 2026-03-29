@@ -1,4 +1,8 @@
-﻿# Runtime and Edge Traffic Path
+---
+title: 'Runtime and Edge Traffic Path'
+---
+
+# Runtime and Edge Traffic Path
 
 This page is the high-level picture for how users reach workloads after deployment.
 
@@ -25,8 +29,8 @@ flowchart LR
 
 - [cloud-networking/Networking.html](../cloud-networking/Networking.html)
 - [cloud-networking/Networking2.html](../cloud-networking/Networking2.html)
-- [Server/WebServer/Ngnix.md](../Server/WebServer/Ngnix.md)
-- [onprem/MigrationMM.md](../onprem/MigrationMM.md)
+- [Server/WebServer/Ngnix.md](../Server/WebServer/Ngnix.html)
+- [onprem/MigrationMM.md](../onprem/MigrationMM.html)
 
 ## What to deepen next
 

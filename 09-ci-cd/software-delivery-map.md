@@ -1,4 +1,8 @@
-﻿# Software Delivery Map
+---
+title: 'Software Delivery Map'
+---
+
+# Software Delivery Map
 
 This is the high-level flow for how modern teams move from code to production.
 
@@ -49,9 +53,9 @@ flowchart LR
 
 ## Current source material
 
-- [basics/CI/1.ci_foundations_remember.md](../basics/CI/1.ci_foundations_remember.md)
-- [basics/CD/Github/CI_CD_Architecture_SAP_Scale.md](../basics/CD/Github/CI_CD_Architecture_SAP_Scale.md)
-- [basics/CD/Github/ci_cd_security_sap_scale_wiki.md](../basics/CD/Github/ci_cd_security_sap_scale_wiki.md)
+- [basics/CI/1.ci_foundations_remember.md](../basics/CI/1.ci_foundations_remember.html)
+- [basics/CD/Github/CI_CD_Architecture_SAP_Scale.md](../basics/CD/Github/CI_CD_Architecture_SAP_Scale.html)
+- [basics/CD/Github/ci_cd_security_sap_scale_wiki.md](../basics/CD/Github/ci_cd_security_sap_scale_wiki.html)
 - [.github/workflows](../.github/workflows/)
 
 ## What to deepen next

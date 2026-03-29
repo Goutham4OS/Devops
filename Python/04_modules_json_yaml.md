@@ -1,3 +1,7 @@
+---
+title: 'See all available functions and attributes'
+---
+
     # 🔍 Python Modules: JSON & YAML - Essential for DevOps
 
 ## What You'll Learn
@@ -832,5 +836,5 @@ Practice with:
 4. Build a config validator script
 
 Check out:
-1. **Everything is Object** → [05_everything_is_object.md](05_everything_is_object.md)
+1. **Everything is Object** → [05_everything_is_object.md](05_everything_is_object.html)
 

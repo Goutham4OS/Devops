@@ -1,3 +1,7 @@
+---
+title: 'StatefulSet: Simple Explanation'
+---
+
 # StatefulSet: Simple Explanation
 
 ## What is StatefulSet?

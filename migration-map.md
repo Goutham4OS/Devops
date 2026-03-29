@@ -1,4 +1,8 @@
-﻿# Migration Map
+---
+title: 'Migration Map'
+---
+
+# Migration Map
 
 This file keeps the old content and the new structure synced.
 

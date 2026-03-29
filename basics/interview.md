@@ -1,3 +1,7 @@
+---
+title: 'interview'
+---
+
 
 In DevOps, "reliably" means consistently delivering high-performing, stable software by integrating practices like continuous monitoring, automated testing, Infrastructure as Code (IaC), and Site Reliability Engineering (SRE) to ensure systems are predictable, fault-tolerant, and meet user expectations for uptime and performance, balancing rapid development with operational stability. It's about building systems that don't fail unexpectedly, using engineering to manage operations and achieve defined Service Level Objectives (SLOs). 
 

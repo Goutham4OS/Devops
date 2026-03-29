@@ -1,3 +1,7 @@
+---
+title: 'Kubernetes High Availability Architecture - Complete Visual Guide'
+---
+
 # Kubernetes High Availability Architecture - Complete Visual Guide
 
 > 🎯 **Purpose**: Easy-to-understand guide with visual diagrams for designing and implementing HA applications in Kubernetes

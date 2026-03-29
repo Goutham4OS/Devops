@@ -1,3 +1,7 @@
+---
+title: 'Common Python Modules for Azure DevOps'
+---
+
 # Common Python Modules for Azure DevOps
 
 Essential Python libraries and modules for Azure infrastructure management, automation, and DevOps workflows.
@@ -1345,4 +1349,4 @@ def generate_cost_report(subscription_id):
 This guide covers the most common Python modules used in Azure DevOps workflows!
 
 ## Next Steps
-[09_python_modules_and_packages](09_python_modules_and_packages.md)
+[09_python_modules_and_packages](09_python_modules_and_packages.html)

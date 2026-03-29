@@ -1,3 +1,7 @@
+---
+title: 'Why Web Servers Exist → The Rise of Nginx'
+---
+
 # Why Web Servers Exist → The Rise of Nginx
 
 > **Scope of this document**

@@ -1,10 +1,14 @@
-﻿# Infra as Code
+---
+title: 'Infra as Code'
+---
+
+# Infra as Code
 
 Provisioning, policy, environment modeling, and the control plane behind repeatable platforms.
 
 ## Recommended reading order
 
-1. [provisioning-flow.md](./provisioning-flow.md)
+1. [provisioning-flow.md](./provisioning-flow.html)
 2. [terraform/main.tf](../terraform/main.tf)
 3. [terraform/variables.tf](../terraform/variables.tf)
 4. [terraform/outputs.tf](../terraform/outputs.tf)

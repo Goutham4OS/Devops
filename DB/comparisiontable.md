@@ -1,3 +1,7 @@
+---
+title: 'Managed Database vs Kubernetes StatefulSet'
+---
+
 # Managed Database vs Kubernetes StatefulSet
 
 ## Quick Comparison

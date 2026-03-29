@@ -1,4 +1,8 @@
-﻿# Infrastructure Provisioning Flow
+---
+title: 'Infrastructure Provisioning Flow'
+---
+
+# Infrastructure Provisioning Flow
 
 This page shows how IaC connects planning, cloud resources, policy, and runtime platforms.
 

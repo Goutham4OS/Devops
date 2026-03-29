@@ -1,3 +1,7 @@
+---
+title: '🔄 Mutability, Memory & Function Behavior in Python'
+---
+
 # 🔄 Mutability, Memory & Function Behavior in Python
 
 ## Understanding How Python Manages Memory
@@ -700,7 +704,7 @@ sys.getsizeof(obj)  # Memory size in bytes
 
 ## 🚀 Next Steps
 
-1. **Variables and Memory** → See [07_logging_exploration.md](07_logging_exploration.md)
+1. **Variables and Memory** → See [07_logging_exploration.md](07_logging_exploration.html)
 
 
 ````

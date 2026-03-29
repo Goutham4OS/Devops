@@ -1,3 +1,7 @@
+---
+title: '🎯 Core Philosophy: "Everything is an Object" in Python'
+---
+
 
 # 🎯 Core Philosophy: "Everything is an Object" in Python
 
@@ -679,7 +683,7 @@ help(list.append)
 
 ## 🚀 Next Steps
 
-1. **Variables and Memory** → See [06_mutability_memory.md](06_mutability_memory.md)
+1. **Variables and Memory** → See [06_mutability_memory.md](06_mutability_memory.html)
 
 
 ````

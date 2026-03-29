@@ -1,4 +1,8 @@
-﻿# Observability
+---
+title: 'Observability'
+---
+
+# Observability
 
 Metrics, logs, traces, alerting, SLO thinking, and how operations learn from production.
 
@@ -11,7 +15,7 @@ Metrics, logs, traces, alerting, SLO thinking, and how operations learn from pro
 
 ## Current source material
 
-- [observability and SRE loop](./observability-and-sre-loop.md)
+- [observability and SRE loop](./observability-and-sre-loop.html)
 - Existing repo material is thin here, so this section is a priority for new content.
 
 ## Rebuild intent

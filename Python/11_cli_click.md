@@ -1,3 +1,7 @@
+---
+title: '🖥️ Command-Line Interfaces (CLI) & The Click Library'
+---
+
 ````markdown
 # 🖥️ Command-Line Interfaces (CLI) & The Click Library
 
@@ -992,7 +996,7 @@ if __name__ == "__main__":
 
 ## 🚀 Next Steps
 
-1. **Web Development** → See [12_devops_web_automation.md](12_devops_web_automation.md)
+1. **Web Development** → See [12_devops_web_automation.md](12_devops_web_automation.html)
 
 
 ````

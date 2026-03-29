@@ -1,3 +1,7 @@
+---
+title: '⚙️ Functions - Reusable Code Blocks'
+---
+
 # ⚙️ Functions - Reusable Code Blocks
 
 ## What is a Function?
@@ -460,4 +464,4 @@ print(generate_server_name("dev", "db", 5))    # dev-db-05
 ## Next Steps
 
 Learn about:
-Modules → [04_modules_json_yaml.md](04_modules_json_yaml.md)
+Modules → [04_modules_json_yaml.md](04_modules_json_yaml.html)

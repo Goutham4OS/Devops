@@ -1,3 +1,7 @@
+---
+title: 'Git Visual Command Guide & Mind Map'
+---
+
 # Git Visual Command Guide & Mind Map
 
 ## Git Commands Mind Map

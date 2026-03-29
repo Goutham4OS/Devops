@@ -1,3 +1,7 @@
+---
+title: 'Paging & Virtual Memory — From First Principles'
+---
+
 
 # Paging & Virtual Memory — From First Principles
  ### it is for memory managemnt

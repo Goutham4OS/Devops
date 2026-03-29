@@ -1,3 +1,7 @@
+---
+title: 'Messaging Systems in Production (Platform Engineer Guide)'
+---
+
 # Messaging Systems in Production (Platform Engineer Guide)
 
 ## Scope

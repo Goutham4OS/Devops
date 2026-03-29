@@ -1,4 +1,8 @@
-﻿# ACR and Runtime Promotion
+---
+title: 'ACR and Runtime Promotion'
+---
+
+# ACR and Runtime Promotion
 
 This page bridges the gap between pipeline output and the deployed runtime.
 
@@ -22,6 +26,6 @@ flowchart LR
 
 ## Current references
 
-- [software-delivery-map.md](../09-ci-cd/software-delivery-map.md)
+- [software-delivery-map.md](../09-ci-cd/software-delivery-map.html)
 - [terraform/modules/acr](../terraform/modules/acr/)
-- [runtime-edge-traffic-path.md](./runtime-edge-traffic-path.md)
+- [runtime-edge-traffic-path.md](./runtime-edge-traffic-path.html)

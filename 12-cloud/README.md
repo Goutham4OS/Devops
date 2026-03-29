@@ -1,16 +1,20 @@
-﻿# Cloud
+---
+title: 'Cloud'
+---
+
+# Cloud
 
 Landing zones, runtime targets, edge controls, hybrid patterns, and migration from on-prem to cloud.
 
 ## Recommended reading order
 
-1. [cloud-architecture-and-well-architected.md](./cloud-architecture-and-well-architected.md)
-2. [runtime-edge-traffic-path.md](./runtime-edge-traffic-path.md)
-3. [acr-and-runtime-promotion.md](./acr-and-runtime-promotion.md)
-4. [vm-to-aks-modernization-story.md](../15-projects/vm-to-aks-modernization-story.md)
-5. [onprem/MigrationMM.md](../onprem/MigrationMM.md)
-6. [todo/01-onprem-story.todo.md](../todo/01-onprem-story.todo.md)
-7. [todo/02-onprem-issues.todo.md](../todo/02-onprem-issues.todo.md)
+1. [cloud-architecture-and-well-architected.md](./cloud-architecture-and-well-architected.html)
+2. [runtime-edge-traffic-path.md](./runtime-edge-traffic-path.html)
+3. [acr-and-runtime-promotion.md](./acr-and-runtime-promotion.html)
+4. [vm-to-aks-modernization-story.md](../15-projects/vm-to-aks-modernization-story.html)
+5. [onprem/MigrationMM.md](../onprem/MigrationMM.html)
+6. [todo/01-onprem-story.todo.md](../todo/01-onprem-story.todo.html)
+7. [todo/02-onprem-issues.todo.md](../todo/02-onprem-issues.todo.html)
 8. [cloud-networking/Networking.html](../cloud-networking/Networking.html)
 9. [cloud-networking/Networking2.html](../cloud-networking/Networking2.html)
 

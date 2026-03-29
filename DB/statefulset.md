@@ -1,3 +1,7 @@
+---
+title: 'Kubernetes Stateful Architecture — Decision & Flow Mind Maps'
+---
+
 
 # Kubernetes Stateful Architecture — Decision & Flow Mind Maps
 
