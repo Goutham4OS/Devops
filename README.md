@@ -1,124 +1,82 @@
-# DevOps From Scratch — Learning Roadmap
+﻿# DevOps From Scratch
 
-A structured path that starts from how computers work (CPU, memory, storage) and builds toward DevOps, platform engineering, and cloud tooling. This README is a **skeleton** for the future reorganization of the repository and for the GitHub Pages site.
+This repository is becoming a story-first learning platform for DevOps, Cloud, SRE, and Platform Engineering.
 
-## 🧭 Start Here
-- [Roadmap (visual sketch + ordered path)](./roadmap.md)
-- [Navigation page (jump to any topic/file)](./index.md)
+The direction is simple:
+1. start from how computers, operating systems, and networks work
+2. show how teams build and ship software safely
+3. explain how platforms run in Kubernetes, VMs, and private cloud
+4. connect delivery with reliability, security, observability, and platform engineering
 
-## ✅ Goals
-- Teach DevOps from the ground up: hardware → OS → networking → programming → systems → cloud → platform tools.
-- Provide a clear learning path with **short lessons**, **labs**, and **diagrams**.
-- Keep everything GitHub Pages–friendly (Markdown-first).
+## Start Here
 
----
+- [Interactive journey map](./index.html)
+- [Navigation hub](./index.md)
+- [Real story: from VMs to AKS and platform operations](./15-projects/vm-to-aks-modernization-story.md)
+- [Roadmap](./roadmap.md)
+- [Migration map](./migration-map.md)
+- [Diagram library](./assets/diagrams/README.md)
 
-## 📌 Proposed Repository Structure (Skeleton)
+## Target Information Architecture
 
-```
-/ (repo root)
-├── README.md               # High-level roadmap and repo map (this file)
-├── index.md                # GitHub Pages landing page
-├── 00-foundations/         # CPU, memory, storage, boot process, OS basics
-├── 01-networking/          # TCP/IP, DNS, HTTP, TLS, subnetting
-├── 02-linux/               # Shell, filesystem, processes, systemd
-├── 03-programming/         # Python + scripting for ops
-├── 04-git/                 # Git basics, workflows, CI integration
-├── 05-databases/           # SQL, NoSQL, backups, replication
-├── 06-servers/             # Web servers, reverse proxies, load balancing
-├── 07-containers/          # Docker, container lifecycle
-├── 08-orchestration/       # Kubernetes, Helm, service mesh
-├── 09-ci-cd/               # Pipelines, artifacts, testing
-├── 10-observability/       # Logs, metrics, tracing
-├── 11-infra-as-code/        # Terraform, Ansible, config mgmt
-├── 12-cloud/               # AWS/GCP/Azure fundamentals
-├── 13-platform-engineering/# Internal platforms, golden paths
-├── 14-security/            # IAM, secrets, DevSecOps
-├── 15-projects/            # Capstone projects and labs
-└── assets/                 # Diagrams, images, shared assets
-```
-
-> Note: this is the **target structure**. Existing folders will be migrated into these sections in future steps.
-
----
-
-## 🧭 Learning Path (Skeleton)
-
-### Phase 1 — Computer & OS Fundamentals
-- CPU architecture, memory, storage, boot process
-- OS basics: kernel vs user space, processes, filesystems
-- Basic Linux commands and shell
-
-### Phase 2 — Networking & Web
-- TCP/IP, DNS, HTTP/HTTPS
-- Subnets, routing, NAT
-- TLS basics and certificates
-
-### Phase 3 — Programming for Ops
-- Python scripting
-- Automation, CLI tools, APIs
-
-### Phase 4 — Systems & Data
-- Databases (SQL/NoSQL)
-- Servers (Nginx/Apache), reverse proxies
-- Caching and queues
-
-### Phase 5 — Containers & Orchestration
-- Docker fundamentals
-- Kubernetes, Helm, service discovery
-
-### Phase 6 — CI/CD & Infrastructure
-- Pipelines, testing, artifacts
-- Terraform, Ansible, configuration management
-
-### Phase 7 — Cloud & Platform
-- Cloud core services
-- Observability and SRE
-- Platform engineering practices
-
----
-
-## 🧩 Diagram Plan (Placeholders)
-
-We will add visual diagrams as Mermaid (works in GitHub) and images in `/assets/`.
-
-### Example: DevOps Journey
-
-```mermaid
-flowchart LR
-    A[CPU + Memory] --> B[Operating System]
-    B --> C[Networking]
-    C --> D[Programming]
-    D --> E[Servers + Databases]
-    E --> F[Containers]
-    F --> G[Kubernetes]
-    G --> H[CI/CD]
-    H --> I[Cloud + Platform]
+```text
+00-foundations
+01-networking
+02-linux
+03-programming
+04-git
+05-databases
+06-servers
+07-containers
+08-orchestration
+09-ci-cd
+10-observability
+11-infra-as-code
+12-cloud
+13-platform-engineering
+14-security
+15-projects
+assets/diagrams
 ```
 
-### Example: CI/CD Skeleton
+## Story We Want the Site to Tell
 
-```mermaid
-flowchart LR
-    A[Code] --> B[Build]
-    B --> C[Test]
-    C --> D[Package]
-    D --> E[Deploy]
-```
+### Phase 1: Foundations
+- How machines became computers
+- CPU, memory, storage, boot, operating systems
+- Linux, networking, and programming basics
 
----
+### Phase 2: Modern Delivery
+- Agile requirements and developer workflow
+- Git, branching, pull requests, and review best practices
+- CI, quality gates, test automation, artifact creation
+- DevSecOps controls such as SAST, secret scanning, IaC scanning, SBOM, and image signing
 
-## 📄 GitHub Pages Plan
-- `index.md` will be the homepage (short intro + navigation).
-- Each section folder will have its own `README.md` as the landing page.
-- `assets/` will store reusable diagrams.
+### Phase 3: Runtime and Cloud
+- Registries such as ACR and deployment targets such as Kubernetes, VMs, and private cloud
+- Traffic path from users and partners through DNS, CDN, WAF, load balancer, ingress, API gateway, and NGINX
+- Application, cache, queue, object storage, and database runtime concerns
+- Cloud architecture, well-architected thinking, and system design tradeoffs
 
----
+### Phase 4: Reliability and Platforms
+- Monitoring, logging, tracing, alerting, SLIs, SLOs, and incident response
+- IaC, policy, guardrails, golden paths, self-service, and internal platform engineering
 
-## 🔜 Next Steps
-1. Map existing folders to the target structure.
-2. Create section landing pages.
-3. Migrate current notes into structured lessons.
-4. Expand diagrams and add labs.
+## What This Pass Adds
 
-If you want, I can start migrating existing content into this structure next.
+- A new landing experience focused on the end-to-end story instead of a loose tool catalog
+- New section folders with landing pages
+- Focused high-level diagram pages that we can deepen later
+- A migration map so the existing content stays connected while we reorganize
+- Real story pages for VM to AKS modernization, cloud architecture, and role progression
+
+## Existing Content Is Still Valuable
+
+The current folders such as `CS`, `basics`, `Git`, `K8s`, `terraform`, `cloud-networking`, and `todo` contain good raw material. In this pass, they are not deleted or moved. They are mapped into the new structure so we can migrate safely.
+
+## Suggested Next Build Steps
+
+1. Expand each new section with lesson pages and labs.
+2. Move existing source files into the new folders in small batches.
+3. Replace TODO pages with narrative chapters and detailed architecture walkthroughs.
+4. Publish the new landing experience through GitHub Pages.

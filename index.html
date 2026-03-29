@@ -1,0 +1,187 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DevOps From Scratch | Journey Map</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap');
+  :root {
+    --bg: #050505;
+    --paper: rgba(14,16,20,0.82);
+    --paper-2: rgba(20,23,29,0.94);
+    --ink: #f7f7f2;
+    --muted: #a7b0bb;
+    --line: rgba(255,255,255,0.1);
+    --accent: #2dd4bf;
+    --accent-2: #f97316;
+    --accent-3: #60a5fa;
+    --accent-4: #facc15;
+    --shadow: 0 24px 80px rgba(0, 0, 0, 0.38);
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    color: var(--ink);
+    background:
+      radial-gradient(circle at top left, rgba(45,212,191,0.16), transparent 28%),
+      radial-gradient(circle at top right, rgba(249,115,22,0.14), transparent 24%),
+      radial-gradient(circle at 50% 0%, rgba(96,165,250,0.12), transparent 30%),
+      linear-gradient(180deg, #070707 0%, #0d1015 100%);
+    font-family: 'IBM Plex Sans', sans-serif;
+  }
+  .shell { max-width: 1320px; margin: 0 auto; padding: 40px 20px 80px; }
+  .hero, .section {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 28px;
+    box-shadow: var(--shadow);
+    padding: 28px;
+    backdrop-filter: blur(10px);
+  }
+  .section { margin-top: 28px; padding: 24px; }
+  .eyebrow { text-transform: uppercase; letter-spacing: 0.12em; font-size: 12px; color: var(--accent); font-weight: 700; margin-bottom: 10px; }
+  h1, h2 { font-family: 'Space Grotesk', sans-serif; margin: 0; }
+  h1 { font-size: clamp(32px, 5vw, 56px); line-height: 1.02; max-width: 900px; }
+  .hero p, .section-head p, .card p, .mini p, footer { color: var(--muted); }
+  .hero p { max-width: 860px; font-size: 18px; line-height: 1.65; margin: 18px 0 0; }
+  .hero-links, .mini-links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
+  a { text-decoration: none; }
+  .pill {
+    display: inline-flex; align-items: center; gap: 8px; padding: 11px 16px; border-radius: 999px;
+    background: rgba(255,255,255,0.04); border: 1px solid var(--line); color: var(--ink); font-weight: 600;
+  }
+  .section-head { display: flex; justify-content: space-between; align-items: end; gap: 16px; margin-bottom: 20px; }
+  .section-head p { margin: 10px 0 0; max-width: 780px; line-height: 1.6; }
+  .flow { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; }
+  .card {
+    display: block; position: relative; background: var(--paper-2); border: 1px solid var(--line);
+    border-radius: 22px; padding: 18px; min-height: 170px;
+    transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+  }
+  .card:hover { transform: translateY(-4px); box-shadow: 0 22px 44px rgba(0, 0, 0, 0.34); border-color: rgba(255,255,255,0.24); }
+  .card-top { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 16px; }
+  .step {
+    display: inline-flex; align-items: center; justify-content: center; min-width: 38px; height: 38px;
+    border-radius: 12px; font-size: 13px; font-weight: 700; color: #fff; margin-bottom: 16px;
+  }
+  .card-top .step { margin-bottom: 0; }
+  .teal { background: var(--accent); }
+  .orange { background: var(--accent-2); }
+  .icon {
+    width: 44px;
+    height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid var(--line);
+    color: var(--ink);
+    flex-shrink: 0;
+  }
+  .icon svg { width: 22px; height: 22px; stroke: currentColor; fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+  .card h3 { margin: 0 0 8px; font-size: 20px; color: var(--ink); }
+  .card p { margin: 0; line-height: 1.55; font-size: 15px; }
+  .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+  .tag {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+    background: rgba(255,255,255,0.04);
+    color: var(--ink);
+    border: 1px solid var(--line);
+  }
+  .card .go { display: inline-block; margin-top: 16px; font-size: 14px; font-weight: 700; color: var(--accent-3); }
+  .rails { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 18px; }
+  .mini { background: var(--paper-2); border: 1px solid var(--line); border-radius: 22px; padding: 20px; }
+  .mini h3 { margin: 0 0 10px; font-size: 18px; }
+  .mini p { margin: 0; line-height: 1.6; }
+  .mini-links a { color: var(--ink); background: rgba(255,255,255,0.04); border: 1px solid var(--line); border-radius: 999px; padding: 10px 12px; font-size: 14px; font-weight: 600; }
+  footer { margin-top: 24px; font-size: 14px; line-height: 1.6; }
+  @media (max-width: 900px) { .rails { grid-template-columns: 1fr; } .shell { padding: 20px 14px 48px; } .hero, .section { border-radius: 22px; } }
+</style>
+</head>
+<body>
+  <main class="shell">
+    <section class="hero">
+      <div class="eyebrow">DevOps, Cloud, SRE, Platform Engineering</div>
+      <h1>From computers to production systems, told as one clear journey.</h1>
+      <p>
+        This landing page explains how we evolve from foundations into modern delivery and runtime operations.
+        It starts with fundamentals, then moves through Git, CI, DevSecOps, registry and ACR patterns, deployment targets,
+        edge routing, cloud architecture, observability, SRE, and platform engineering.
+      </p>
+      <div class="hero-links">
+        <a class="pill" href="./15-projects/vm-to-aks-modernization-story.md">Read the VM to AKS story</a>
+        <a class="pill" href="./roadmap.md">Open roadmap</a>
+        <a class="pill" href="./migration-map.md">See migration map</a>
+        <a class="pill" href="./index.md">Text navigation</a>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Journey A</div>
+          <h2>Foundations to platform thinking</h2>
+          <p>This track explains why cloud and platform work only make sense when the lower layers are understood first.</p>
+        </div>
+      </div>
+      <div class="flow">
+        <a class="card" href="./00-foundations/from-computers-to-cloud.md"><div class="card-top"><div class="step teal">01</div><div class="icon"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="10" rx="2"></rect><path d="M8 19h8"></path><path d="M10 15v4"></path><path d="M14 15v4"></path></svg></div></div><h3>Computers</h3><p>Machines, CPU, memory, storage, and how systems actually start.</p><div class="tags"><span class="tag">boot</span><span class="tag">memory</span><span class="tag">storage</span></div><span class="go">Open page</span></a>
+        <a class="card" href="./01-networking/README.md"><div class="card-top"><div class="step teal">02</div><div class="icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"></circle><path d="M4 12h5"></path><path d="M15 12h5"></path><path d="M12 4v5"></path><path d="M12 15v5"></path></svg></div></div><h3>Networking</h3><p>DNS, TLS, routing, and the connectivity story behind every platform.</p><div class="tags"><span class="tag">DNS</span><span class="tag">TLS</span><span class="tag">routing</span></div><span class="go">Open page</span></a>
+        <a class="card" href="./02-linux/README.md"><div class="card-top"><div class="step teal">03</div><div class="icon"><svg viewBox="0 0 24 24"><path d="M4 7h16"></path><path d="M4 12h10"></path><path d="M4 17h7"></path><path d="M17 12l3 3-3 3"></path></svg></div></div><h3>Linux</h3><p>Processes, filesystems, namespaces, cgroups, and operational reality.</p><div class="tags"><span class="tag">processes</span><span class="tag">cgroups</span><span class="tag">filesystems</span></div><span class="go">Open page</span></a>
+        <a class="card" href="./07-containers/README.md"><div class="card-top"><div class="step teal">04</div><div class="icon"><svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="10" rx="2"></rect><path d="M8 7v10"></path><path d="M13 7v10"></path><path d="M3 12h18"></path></svg></div></div><h3>Containers</h3><p>Portable packaging, images, registries, and the bridge from dev to ops.</p><div class="tags"><span class="tag">images</span><span class="tag">registries</span><span class="tag">overlayfs</span></div><span class="go">Open page</span></a>
+        <a class="card" href="./08-orchestration/README.md"><div class="card-top"><div class="step teal">05</div><div class="icon"><svg viewBox="0 0 24 24"><path d="M7 7h4v4H7z"></path><path d="M13 7h4v4h-4z"></path><path d="M10 13h4v4h-4z"></path><path d="M12 11v2"></path><path d="M11 13H9"></path><path d="M15 13h-2"></path></svg></div></div><h3>Kubernetes</h3><p>Cluster scheduling, service exposure, rollout control, and runtime patterns.</p><div class="tags"><span class="tag">services</span><span class="tag">helm</span><span class="tag">HA</span></div><span class="go">Open page</span></a>
+        <a class="card" href="./13-platform-engineering/internal-developer-platform.md"><div class="card-top"><div class="step teal">06</div><div class="icon"><svg viewBox="0 0 24 24"><path d="M4 17V7l8-4 8 4v10l-8 4-8-4z"></path><path d="M8 12h8"></path><path d="M12 8v8"></path></svg></div></div><h3>Platform</h3><p>Golden paths, self-service, guardrails, and the operating model at scale.</p><div class="tags"><span class="tag">self-service</span><span class="tag">guardrails</span><span class="tag">templates</span></div><span class="go">Open page</span></a>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Journey B</div>
+          <h2>How software ships and runs today</h2>
+          <p>This track is the high-level story you asked for: requirement to code, Git, PR, CI, DevSecOps, registry, deployment, edge, users, and observability.</p>
+        </div>
+      </div>
+      <div class="flow">
+        <a class="card" href="./00-foundations/README.md"><div class="card-top"><div class="step orange">01</div><div class="icon"><svg viewBox="0 0 24 24"><path d="M4 7h16"></path><path d="M4 12h11"></path><path d="M4 17h8"></path><circle cx="18" cy="12" r="2"></circle></svg></div></div><h3>Agile and requirements</h3><p>Stories, acceptance criteria, non-functional requirements, and delivery planning.</p><div class="tags"><span class="tag">stories</span><span class="tag">NFRs</span><span class="tag">backlog</span></div><span class="go">Open page</span></a>
+        <a class="card" href="./04-git/README.md"><div class="card-top"><div class="step orange">02</div><div class="icon"><svg viewBox="0 0 24 24"><path d="M7 7l10 10"></path><path d="M17 7L7 17"></path><circle cx="7" cy="7" r="2"></circle><circle cx="17" cy="7" r="2"></circle><circle cx="7" cy="17" r="2"></circle><circle cx="17" cy="17" r="2"></circle></svg></div></div><h3>Git and PRs</h3><p>Branching, code review, approvals, merge policy, and collaboration best practices.</p><div class="tags"><span class="tag">branching</span><span class="tag">PR review</span><span class="tag">protected main</span></div><span class="go">Open page</span></a>
+        <a class="card" href="./09-ci-cd/software-delivery-map.md"><div class="card-top"><div class="step orange">03</div><div class="icon"><svg viewBox="0 0 24 24"><path d="M5 12h4"></path><path d="M9 8l4 4-4 4"></path><path d="M15 6h4v12h-4z"></path></svg></div></div><h3>CI and DevSecOps</h3><p>Checks, tests, scans, SBOM, signing, registry, promotion, and rollback.</p><div class="tags"><span class="tag">SAST</span><span class="tag">SBOM</span><span class="tag">signing</span></div><span class="go">Open page</span></a>
+        <a class="card" href="./11-infra-as-code/provisioning-flow.md"><div class="card-top"><div class="step orange">04</div><div class="icon"><svg viewBox="0 0 24 24"><path d="M4 8l8-4 8 4-8 4-8-4z"></path><path d="M4 12l8 4 8-4"></path><path d="M4 16l8 4 8-4"></path></svg></div></div><h3>IaC and provisioning</h3><p>Terraform, network, identity, policy, shared services, and platform setup.</p><div class="tags"><span class="tag">Terraform</span><span class="tag">identity</span><span class="tag">policy</span></div><span class="go">Open page</span></a>
+        <a class="card" href="./12-cloud/runtime-edge-traffic-path.md"><div class="card-top"><div class="step orange">05</div><div class="icon"><svg viewBox="0 0 24 24"><path d="M4 12h4"></path><path d="M8 8l4 4-4 4"></path><path d="M12 12h8"></path><path d="M18 8l2 4-2 4"></path></svg></div></div><h3>Edge to runtime</h3><p>Users, DNS, CDN, WAF, Front Door, ALB, gateway, ingress, NGINX, service, and data.</p><div class="tags"><span class="tag">WAF</span><span class="tag">gateway</span><span class="tag">NGINX</span></div><span class="go">Open page</span></a>
+        <a class="card" href="./10-observability/observability-and-sre-loop.md"><div class="card-top"><div class="step orange">06</div><div class="icon"><svg viewBox="0 0 24 24"><path d="M4 16l4-5 3 3 4-7 5 9"></path><path d="M4 20h16"></path></svg></div></div><h3>Observability and SRE</h3><p>Metrics, logs, traces, alerts, SLOs, incidents, and continuous improvement.</p><div class="tags"><span class="tag">metrics</span><span class="tag">traces</span><span class="tag">SLOs</span></div><span class="go">Open page</span></a>
+      </div>
+      <div class="rails">
+        <div class="mini">
+          <h3>Runtime targets</h3>
+          <p>We will deepen this into separate pages for Kubernetes, VM workloads, and private cloud deployment patterns. For now, the runtime page keeps the architecture story high-level and connected.</p>
+          <div class="mini-links">
+            <a href="./08-orchestration/README.md">Kubernetes</a>
+            <a href="./12-cloud/runtime-edge-traffic-path.md">Runtime path</a>
+            <a href="./11-infra-as-code/provisioning-flow.md">Provisioning</a>
+          </div>
+        </div>
+        <div class="mini">
+          <h3>What comes next</h3>
+          <p>The next detail pages should cover ACR and registry promotion, artifact signing, edge component decisions, Kubernetes runtime patterns, and SLO-driven operations.</p>
+          <div class="mini-links">
+            <a href="./14-security/README.md">Security</a>
+            <a href="./13-platform-engineering/internal-developer-platform.md">Platform engineering</a>
+            <a href="./assets/diagrams/README.md">Diagram library</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      This is the rebuilt landing layer. Existing source folders remain available while the content is migrated into the new structure.
+    </footer>
+  </main>
+</body>
+</html>
