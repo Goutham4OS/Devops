@@ -270,6 +270,179 @@
       height: auto;
       border-radius: 16px;
     }
+    .content .lead {
+      font-size: 18px;
+      line-height: 1.74;
+      color: var(--text);
+    }
+    .content .section-grid,
+    .content .compare-grid,
+    .content .role-grid {
+      display: grid;
+      gap: 16px;
+      margin: 22px 0;
+    }
+    .content .section-grid {
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+    .content .compare-grid {
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+    .content .role-grid {
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+    .content .panel-card,
+    .content .compare-card,
+    .content .role-card,
+    .content .path-card,
+    .content .callout {
+      background: rgba(255, 255, 255, 0.035);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 18px;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.18);
+      transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+      animation: riseIn 420ms ease both;
+    }
+    .content .panel-card:hover,
+    .content .compare-card:hover,
+    .content .role-card:hover,
+    .content .path-card:hover,
+    .content .callout:hover {
+      transform: translateY(-2px);
+      border-color: var(--border-strong);
+      background: rgba(255, 255, 255, 0.05);
+    }
+    .content .panel-card h3,
+    .content .compare-card h3,
+    .content .role-card h3,
+    .content .path-card h3,
+    .content .callout h3 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+    .content .panel-card p,
+    .content .compare-card p,
+    .content .role-card p,
+    .content .path-card p,
+    .content .callout p {
+      margin: 0;
+      color: var(--text2);
+    }
+    .content .icon-chip {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 44px;
+      height: 44px;
+      padding: 0 12px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      background: rgba(99, 179, 237, 0.08);
+      color: var(--text);
+      font-family: var(--mono);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      margin-bottom: 14px;
+    }
+    .content .icon-chip.devops { background: rgba(45, 212, 191, 0.10); border-color: rgba(45, 212, 191, 0.22); }
+    .content .icon-chip.cloud  { background: rgba(99, 179, 237, 0.10); border-color: rgba(99, 179, 237, 0.22); }
+    .content .icon-chip.sre    { background: rgba(124, 58, 237, 0.10); border-color: rgba(124, 58, 237, 0.22); }
+    .content .icon-chip.ops    { background: rgba(245, 158, 11, 0.10); border-color: rgba(245, 158, 11, 0.22); }
+    .content .mini-kicker {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--accent-2);
+      font-family: var(--mono);
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .content .path-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+      gap: 14px;
+      margin: 22px 0;
+    }
+    .content .path-card {
+      position: relative;
+      overflow: hidden;
+    }
+    .content .path-card::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(99, 179, 237, 0.08), transparent 60%);
+      pointer-events: none;
+    }
+    .content .path-step {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      margin-bottom: 12px;
+      background: rgba(45, 212, 191, 0.12);
+      border: 1px solid rgba(45, 212, 191, 0.22);
+      color: var(--text);
+      font-family: var(--mono);
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .content .callout {
+      border-left: 3px solid var(--accent-2);
+      background: rgba(45, 212, 191, 0.05);
+    }
+    .content .callout p + p,
+    .content .panel-card p + p,
+    .content .role-card p + p,
+    .content .compare-card p + p {
+      margin-top: 10px;
+    }
+    .content details {
+      margin: 18px 0;
+      padding: 14px 16px;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.03);
+    }
+    .content summary {
+      cursor: pointer;
+      color: var(--text);
+      font-weight: 600;
+    }
+    .content .diagram-note {
+      margin-top: -6px;
+      margin-bottom: 20px;
+      color: var(--text3);
+      font-size: 12px;
+      font-family: var(--mono);
+    }
+    .content .compare-card ul,
+    .content .role-card ul,
+    .content .panel-card ul {
+      margin: 12px 0 0;
+      padding-left: 18px;
+    }
+    .content .compare-card li,
+    .content .role-card li,
+    .content .panel-card li {
+      color: var(--text2);
+    }
+    @keyframes riseIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
     .page-nav {
       margin-top: 24px;
       padding: 14px;
@@ -403,6 +576,12 @@
       .hero, .content { padding: 20px; }
       .hero-links,
       .top-actions { gap: 8px; }
+      .content .section-grid,
+      .content .compare-grid,
+      .content .role-grid,
+      .content .path-grid {
+        grid-template-columns: 1fr;
+      }
     }
 </style>
 </head>

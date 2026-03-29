@@ -1,86 +1,96 @@
----
+﻿---
 title: 'DevOps From Scratch'
 ---
 
 # DevOps From Scratch
 
-This repository is becoming a story-first learning platform for DevOps, Cloud, SRE, and Platform Engineering.
+<p class="lead">This site is a guided journey from machines to modern platforms. The goal is to help DevOps, Cloud, and SRE engineers understand not only what a tool does, but why it exists, where it breaks, and how it fits into the full operating model.</p>
 
-The direction is simple:
-1. start from how computers, operating systems, and networks work
-2. show how teams build and ship software safely
-3. explain how platforms run in Kubernetes, VMs, and private cloud
-4. connect delivery with reliability, security, observability, and platform engineering
+## What This Site Optimizes For
 
-## Start Here
+<div class="section-grid">
+  <div class="panel-card">
+    <div class="icon-chip ops">MAP</div>
+    <h3>One connected story</h3>
+    <p>Foundations, delivery, runtime, cloud, reliability, and platform engineering are taught as one sequence instead of disconnected notes.</p>
+  </div>
+  <div class="panel-card">
+    <div class="icon-chip devops">WHY</div>
+    <h3>DevOps-first framing</h3>
+    <p>Each topic is tied back to delivery speed, safe change, runtime behavior, and operational tradeoffs.</p>
+  </div>
+  <div class="panel-card">
+    <div class="icon-chip cloud">RUN</div>
+    <h3>Cloud and SRE relevance</h3>
+    <p>The site keeps connecting low-level concepts to cloud design, incident response, observability, and platform decisions.</p>
+  </div>
+</div>
 
-- [Interactive journey map](./index.html)
-- [Navigation hub](./navigation.html)
-- [Real story: from VMs to AKS and platform operations](./15-projects/vm-to-aks-modernization-story.html)
-- [Roadmap](./roadmap.html)
-- [Migration map](./migration-map.html)
-- [Diagram library](./assets/diagrams/README.html)
+## Platform Story
 
-## Target Information Architecture
-
-```text
-00-foundations
-01-networking
-02-linux
-03-programming
-04-git
-05-databases
-06-servers
-07-containers
-08-orchestration
-09-ci-cd
-10-observability
-11-infra-as-code
-12-cloud
-13-platform-engineering
-14-security
-15-projects
-assets/diagrams
+```mermaid
+flowchart LR
+  A[Machines and OS] --> B[Linux and networking]
+  B --> C[Git and CI CD]
+  C --> D[Containers and Kubernetes]
+  D --> E[Cloud runtime and security]
+  E --> F[Observability and SRE]
+  F --> G[Platform engineering and projects]
 ```
 
-## Story We Want the Site to Tell
+<p class="diagram-note">Read the repository from left to right when you want a full-stack mental model. Jump into projects first when you want practical stories, then come back to the layers underneath.</p>
 
-### Phase 1: Foundations
-- How machines became computers
-- CPU, memory, storage, boot, operating systems
-- Linux, networking, and programming basics
+## Why It Matters by Role
 
-### Phase 2: Modern Delivery
-- Agile requirements and developer workflow
-- Git, branching, pull requests, and review best practices
-- CI, quality gates, test automation, artifact creation
-- DevSecOps controls such as SAST, secret scanning, IaC scanning, SBOM, and image signing
+<div class="role-grid">
+  <div class="role-card">
+    <div class="icon-chip devops">DV</div>
+    <h3>For DevOps engineers</h3>
+    <p>This site helps connect build, test, release, runtime, and rollback work into one delivery system instead of a set of separate tools.</p>
+  </div>
+  <div class="role-card">
+    <div class="icon-chip cloud">CL</div>
+    <h3>For cloud engineers</h3>
+    <p>This site helps connect managed services, networking, identity, runtime choices, and platform tradeoffs back to the system behaviors underneath.</p>
+  </div>
+  <div class="role-card">
+    <div class="icon-chip sre">SR</div>
+    <h3>For SREs</h3>
+    <p>This site helps connect change risk, latency, bottlenecks, incident response, and observability to the layers that actually create them.</p>
+  </div>
+</div>
 
-### Phase 3: Runtime and Cloud
-- Registries such as ACR and deployment targets such as Kubernetes, VMs, and private cloud
-- Traffic path from users and partners through DNS, CDN, WAF, load balancer, ingress, API gateway, and NGINX
-- Application, cache, queue, object storage, and database runtime concerns
-- Cloud architecture, well-architected thinking, and system design tradeoffs
+## Best Entry Points
 
-### Phase 4: Reliability and Platforms
-- Monitoring, logging, tracing, alerting, SLIs, SLOs, and incident response
-- IaC, policy, guardrails, golden paths, self-service, and internal platform engineering
+<div class="path-grid">
+  <div class="path-card">
+    <div class="path-step">01</div>
+    <h3>Interactive Journey Map</h3>
+    <p>Use the visual atlas when you want the whole platform story in one screen.</p>
+    <p><a href="./index.html">Open page</a></p>
+  </div>
+  <div class="path-card">
+    <div class="path-step">02</div>
+    <h3>Navigation Hub</h3>
+    <p>Use the structured path when you want a cleaner reading route through the repository.</p>
+    <p><a href="./navigation.html">Open page</a></p>
+  </div>
+  <div class="path-card">
+    <div class="path-step">03</div>
+    <h3>From Computers to Cloud</h3>
+    <p>Start here when cloud feels abstract and you want the lower-layer story first.</p>
+    <p><a href="./00-foundations/from-computers-to-cloud.html">Open page</a></p>
+  </div>
+  <div class="path-card">
+    <div class="path-step">04</div>
+    <h3>VM to AKS Modernization Story</h3>
+    <p>Start here when you prefer realistic project narratives over isolated concept notes.</p>
+    <p><a href="./15-projects/vm-to-aks-modernization-story.html">Open page</a></p>
+  </div>
+</div>
 
-## What This Pass Adds
-
-- A new landing experience focused on the end-to-end story instead of a loose tool catalog
-- New section folders with landing pages
-- Focused high-level diagram pages that we can deepen later
-- A migration map so the existing content stays connected while we reorganize
-- Real story pages for VM to AKS modernization, cloud architecture, and role progression
-
-## Existing Content Is Still Valuable
-
-The current folders such as `CS`, `basics`, `Git`, `K8s`, `terraform`, `cloud-networking`, and `todo` contain good raw material. In this pass, they are not deleted or moved. They are mapped into the new structure so we can migrate safely.
-
-## Suggested Next Build Steps
-
-1. Expand each new section with lesson pages and labs.
-2. Move existing source files into the new folders in small batches.
-3. Replace TODO pages with narrative chapters and detailed architecture walkthroughs.
-4. Publish the new landing experience through GitHub Pages.
+<div class="callout">
+  <span class="mini-kicker">How to use this site</span>
+  <h3>Pick a path, not a random page</h3>
+  <p>If you are building foundations, start with the story pages and section landing pages. If you are solving a real problem at work, jump to the closest section, then use the new previous and next navigation to move backward into fundamentals and forward into runtime, cloud, or SRE impact.</p>
+</div>

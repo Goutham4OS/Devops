@@ -1,68 +1,98 @@
----
+﻿---
 title: 'DevOps From Scratch Navigation Hub'
 ---
 
 # DevOps From Scratch Navigation Hub
 
-Use the [interactive journey map](./index.html) when you want the high-level story first.
-Use this page when you want a structured text navigation path.
+<p class="lead">This page is the text-first reading guide for the repository. Use it when you want a clear study path by role, by layer, or by practical goal without depending only on the visual atlas.</p>
 
-## Fast Entry Points
+## What This Page Helps You Do
 
-- [Real story: from VMs to AKS and platform operations](./15-projects/vm-to-aks-modernization-story.html)
-- [Cloud architecture and well-architected review](./12-cloud/cloud-architecture-and-well-architected.html)
-- [DevOps to Platform to SRE learning journey](./15-projects/devops-platform-sre-learning-journey.html)
-- [From computers to cloud](./00-foundations/from-computers-to-cloud.html)
-- [User mode, kernel mode, and the mode bit](./CS/Machines%20to%20computers/9.user_mode_kernel_mode_and_mode_bit.html)
-- [Software delivery map](./09-ci-cd/software-delivery-map.html)
-- [PR review and branching](./04-git/pr-review-and-branching.html)
-- [DevSecOps supply chain](./14-security/devsecops-supply-chain.html)
-- [ACR and runtime promotion](./12-cloud/acr-and-runtime-promotion.html)
-- [Runtime and edge traffic path](./12-cloud/runtime-edge-traffic-path.html)
-- [Edge routing decision map](./01-networking/edge-routing-decision-map.html)
-- [Infrastructure provisioning flow](./11-infra-as-code/provisioning-flow.html)
-- [Observability and SRE loop](./10-observability/observability-and-sre-loop.html)
-- [Platform engineering operating model](./13-platform-engineering/internal-developer-platform.html)
+<div class="section-grid">
+  <div class="panel-card">
+    <div class="icon-chip ops">PATH</div>
+    <h3>Choose a starting point</h3>
+    <p>Pick foundations, delivery, runtime, cloud, observability, or projects based on what you need right now.</p>
+  </div>
+  <div class="panel-card">
+    <div class="icon-chip devops">FLOW</div>
+    <h3>Move in a logical order</h3>
+    <p>The hub helps you avoid jumping into advanced tools before the lower-layer ideas are stable.</p>
+  </div>
+  <div class="panel-card">
+    <div class="icon-chip cloud">LENS</div>
+    <h3>Study by role</h3>
+    <p>You can use the hub as a DevOps path, a Cloud path, or an SRE path instead of reading everything at once.</p>
+  </div>
+</div>
 
-## New Structured Sections
+## Reading Modes
 
-1. [00 Foundations](./00-foundations/README.html)
-2. [01 Networking](./01-networking/README.html)
-3. [02 Linux](./02-linux/README.html)
-4. [03 Programming](./03-programming/README.html)
-5. [04 Git](./04-git/README.html)
-6. [05 Databases](./05-databases/README.html)
-7. [06 Servers](./06-servers/README.html)
-8. [07 Containers](./07-containers/README.html)
-9. [08 Orchestration](./08-orchestration/README.html)
-10. [09 CI CD](./09-ci-cd/README.html)
-11. [10 Observability](./10-observability/README.html)
-12. [11 Infra as Code](./11-infra-as-code/README.html)
-13. [12 Cloud](./12-cloud/README.html)
-14. [13 Platform Engineering](./13-platform-engineering/README.html)
-15. [14 Security](./14-security/README.html)
-16. [15 Projects](./15-projects/README.html)
+```mermaid
+flowchart TD
+  A[Choose your current need] --> B[Foundations and Linux]
+  A --> C[Git and CI CD]
+  A --> D[Cloud and runtime]
+  A --> E[Observability and SRE]
+  B --> F[Projects and platform engineering]
+  C --> F
+  D --> F
+  E --> F
+```
 
-## Existing Source Material
+<p class="diagram-note">If you are unsure where to begin, start with foundations or projects. Foundations give you the model. Projects show you how the model becomes real delivery and runtime work.</p>
 
-These folders still hold the original notes and draft material we will migrate gradually.
+## Role-Focused Entry Paths
 
-- [Basics](./Basics/)
-- [CS](./CS/)
-- [basics](./basics/)
-- [Git](./Git/)
-- [DB](./DB/)
-- [K8s](./K8s/)
-- [Python](./Python/)
-- [Server](./Server/)
-- [cloud-networking](./cloud-networking/)
-- [terraform](./terraform/)
-- [onprem](./onprem/)
-- [todo](./todo/)
+<div class="role-grid">
+  <div class="role-card">
+    <div class="icon-chip devops">DV</div>
+    <h3>DevOps path</h3>
+    <p>Read Foundations, Git, CI CD, Containers, Orchestration, and Security when your focus is safe and fast software delivery.</p>
+  </div>
+  <div class="role-card">
+    <div class="icon-chip cloud">CL</div>
+    <h3>Cloud path</h3>
+    <p>Read Foundations, Networking, Linux, Cloud, Infra as Code, and Platform Engineering when your focus is architecture and runtime design.</p>
+  </div>
+  <div class="role-card">
+    <div class="icon-chip sre">SR</div>
+    <h3>SRE path</h3>
+    <p>Read Foundations, Linux, Orchestration, Observability, Security, and Projects when your focus is reliability, incidents, and service behavior.</p>
+  </div>
+</div>
 
-## Current Rebuild Priorities
+## Best Starting Pages
 
-1. Replace TODO placeholders with real story chapters.
-2. Expand the VM to AKS modernization story into detailed project walkthroughs.
-3. Add runtime architecture pages for Kubernetes, VM, and private cloud deployment.
-4. Add more diagrams for edge routing, GitOps, observability, and platform guardrails.
+<div class="path-grid">
+  <div class="path-card">
+    <div class="path-step">01</div>
+    <h3>Foundations</h3>
+    <p>Start here when you want the machine, operating-system, and storage model first.</p>
+    <p><a href="./00-foundations/README.html">Open page</a></p>
+  </div>
+  <div class="path-card">
+    <div class="path-step">02</div>
+    <h3>Cloud</h3>
+    <p>Start here when you want runtime targets, edge flow, and well-architected tradeoffs.</p>
+    <p><a href="./12-cloud/README.html">Open page</a></p>
+  </div>
+  <div class="path-card">
+    <div class="path-step">03</div>
+    <h3>Observability</h3>
+    <p>Start here when your focus is incidents, alerts, telemetry, and reliability loops.</p>
+    <p><a href="./10-observability/README.html">Open page</a></p>
+  </div>
+  <div class="path-card">
+    <div class="path-step">04</div>
+    <h3>Projects</h3>
+    <p>Start here when you want realistic modernization and platform stories first.</p>
+    <p><a href="./15-projects/README.html">Open page</a></p>
+  </div>
+</div>
+
+<div class="callout">
+  <span class="mini-kicker">How to use this hub</span>
+  <h3>Read with a concrete goal</h3>
+  <p>Choose the path that matches your current problem or interview target. That keeps the repository readable and prevents the content from feeling like one giant undifferentiated note dump.</p>
+</div>
