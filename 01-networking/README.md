@@ -1,5 +1,6 @@
-﻿---
+---
 title: 'Networking'
+permalink: /01-networking/
 ---
 
 # Networking
@@ -94,3 +95,5 @@ flowchart LR
   <h3>Study the path before the products</h3>
   <p>Start with the request path and only then learn the individual services. That order makes cloud networking easier to retain and easier to apply under incident pressure.</p>
 </div>
+
+

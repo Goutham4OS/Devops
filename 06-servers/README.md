@@ -1,5 +1,6 @@
 ---
 title: 'Servers'
+permalink: /06-servers/
 ---
 
 # Servers
@@ -23,3 +24,5 @@ The web serving layer, reverse proxies, ingress, and north-south traffic handlin
 - Create a cleaner landing page for this section.
 - Gradually migrate existing files into a consistent lesson sequence.
 - Keep this section story-first, not tool-list-first.
+
+

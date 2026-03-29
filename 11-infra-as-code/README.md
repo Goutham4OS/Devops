@@ -1,5 +1,6 @@
 ---
 title: 'Infra as Code'
+permalink: /11-infra-as-code/
 ---
 
 # Infra as Code
@@ -18,3 +19,5 @@ Provisioning, policy, environment modeling, and the control plane behind repeata
 8. [terraform/modules/acr/main.tf](../terraform/modules/acr/main.tf)
 9. [terraform/modules/aks/main.tf](../terraform/modules/aks/main.tf)
 10. [terraform/modules/traffic_manager/main.tf](../terraform/modules/traffic_manager/main.tf)
+
+

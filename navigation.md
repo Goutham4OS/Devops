@@ -69,25 +69,25 @@ flowchart TD
     <div class="path-step">01</div>
     <h3>Foundations</h3>
     <p>Start here when you want the machine, operating-system, and storage model first.</p>
-    <p><a href="./00-foundations/README.html">Open page</a></p>
+    <p><a href="./00-foundations/">Open page</a></p>
   </div>
   <div class="path-card">
     <div class="path-step">02</div>
     <h3>Cloud</h3>
     <p>Start here when you want runtime targets, edge flow, and well-architected tradeoffs.</p>
-    <p><a href="./12-cloud/README.html">Open page</a></p>
+    <p><a href="./12-cloud/">Open page</a></p>
   </div>
   <div class="path-card">
     <div class="path-step">03</div>
     <h3>Observability</h3>
     <p>Start here when your focus is incidents, alerts, telemetry, and reliability loops.</p>
-    <p><a href="./10-observability/README.html">Open page</a></p>
+    <p><a href="./10-observability/">Open page</a></p>
   </div>
   <div class="path-card">
     <div class="path-step">04</div>
     <h3>Projects</h3>
     <p>Start here when you want realistic modernization and platform stories first.</p>
-    <p><a href="./15-projects/README.html">Open page</a></p>
+    <p><a href="./15-projects/">Open page</a></p>
   </div>
 </div>
 
@@ -96,3 +96,4 @@ flowchart TD
   <h3>Read with a concrete goal</h3>
   <p>Choose the path that matches your current problem or interview target. That keeps the repository readable and prevents the content from feeling like one giant undifferentiated note dump.</p>
 </div>
+

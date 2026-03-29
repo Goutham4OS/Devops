@@ -100,7 +100,7 @@ flowchart LR
     <div class="path-step">04</div>
     <h3>Linux</h3>
     <p>Continue upward into the runtime layer once the machine model feels clear.</p>
-    <p><a href="../02-linux/README.html">Open page</a></p>
+    <p><a href="../02-linux/">Open page</a></p>
   </div>
 </div>
 
@@ -109,3 +109,4 @@ flowchart LR
   <h3>Use this as a bridge, not a final stop</h3>
   <p>Read this page to connect the layers. Then go deeper into the foundations chapters or move upward into Linux, containers, orchestration, and cloud depending on what you need next.</p>
 </div>
+

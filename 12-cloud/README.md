@@ -1,5 +1,6 @@
-﻿---
+---
 title: 'Cloud'
+permalink: /12-cloud/
 ---
 
 # Cloud
@@ -108,3 +109,5 @@ flowchart LR
   <h3>Read cloud through tradeoffs</h3>
   <p>Whenever you open a cloud page here, ask what you gain, what you lose, and what you now have to operate. That habit is more valuable than memorizing service names.</p>
 </div>
+
+

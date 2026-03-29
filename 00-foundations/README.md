@@ -1,5 +1,6 @@
-﻿---
+---
 title: 'Foundations'
+permalink: /00-foundations/
 ---
 
 # Foundations
@@ -93,3 +94,5 @@ flowchart LR
   <h3>Build the model, then revisit as needed</h3>
   <p>The best way to use foundations is to read just enough to understand the model, then come back later when Linux, containers, Kubernetes, or cloud incidents point you here again.</p>
 </div>
+
+

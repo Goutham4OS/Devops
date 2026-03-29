@@ -1,9 +1,9 @@
 pages:
-  - url: /README.html
+  - url: /repository-guide/
     label: Repository Guide
   - url: /navigation.html
     label: Navigation Hub
-  - url: /00-foundations/README.html
+  - url: /00-foundations/
     label: Foundations
   - url: /00-foundations/from-computers-to-cloud.html
     label: From Computers to Cloud
@@ -39,23 +39,23 @@ pages:
     label: Virtual Memory Foundations
   - url: /CS/Virtual_Memory/virtual_memory_from_first_principlesand%20paging_and_.html
     label: Virtual Memory from First Principles
-  - url: /02-linux/README.html
+  - url: /02-linux/
     label: Linux
-  - url: /04-git/README.html
+  - url: /04-git/
     label: Git
   - url: /04-git/pr-review-and-branching.html
     label: PR Review and Branching
-  - url: /09-ci-cd/README.html
+  - url: /09-ci-cd/
     label: CI CD
   - url: /09-ci-cd/software-delivery-map.html
     label: Software Delivery Map
   - url: /14-security/devsecops-supply-chain.html
     label: DevSecOps Supply Chain
-  - url: /11-infra-as-code/README.html
+  - url: /11-infra-as-code/
     label: Infrastructure as Code
   - url: /11-infra-as-code/provisioning-flow.html
     label: Provisioning Flow
-  - url: /12-cloud/README.html
+  - url: /12-cloud/
     label: Cloud
   - url: /12-cloud/runtime-edge-traffic-path.html
     label: Runtime and Edge Traffic Path
@@ -63,17 +63,19 @@ pages:
     label: ACR and Runtime Promotion
   - url: /12-cloud/cloud-architecture-and-well-architected.html
     label: Cloud Architecture and Well-Architected Review
-  - url: /10-observability/README.html
+  - url: /10-observability/
     label: Observability
   - url: /10-observability/observability-and-sre-loop.html
     label: Observability and SRE Loop
-  - url: /13-platform-engineering/README.html
+  - url: /13-platform-engineering/
     label: Platform Engineering
   - url: /13-platform-engineering/internal-developer-platform.html
     label: Internal Developer Platform
-  - url: /15-projects/README.html
+  - url: /15-projects/
     label: Projects
   - url: /15-projects/vm-to-aks-modernization-story.html
     label: VM to AKS Modernization Story
   - url: /15-projects/devops-platform-sre-learning-journey.html
     label: DevOps to Platform to SRE Learning Journey
+
+

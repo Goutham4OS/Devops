@@ -1,5 +1,6 @@
-﻿---
+---
 title: 'Containers'
+permalink: /07-containers/
 ---
 
 # Containers
@@ -93,4 +94,6 @@ flowchart LR
   <h3>Read containers as both package and runtime</h3>
   <p>Do not stop at build and run commands. The real value comes when you connect image design, isolation, filesystems, and security posture to the environments where the workloads actually live.</p>
 </div>
+
+
 

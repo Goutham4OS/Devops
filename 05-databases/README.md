@@ -1,5 +1,6 @@
 ---
 title: 'Databases'
+permalink: /05-databases/
 ---
 
 # Databases
@@ -20,3 +21,5 @@ Data durability, replication, stateful workloads, and tradeoffs between managed 
 10. [DB/comparisiontable.md](../DB/comparisiontable.html)
 11. [DB/statefulset-simplified.md](../DB/statefulset-simplified.html)
 12. [DB/statefulset.md](../DB/statefulset.html)
+
+

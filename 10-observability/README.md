@@ -1,5 +1,6 @@
-﻿---
+---
 title: 'Observability'
+permalink: /10-observability/
 ---
 
 # Observability
@@ -86,3 +87,5 @@ flowchart LR
   <h3>This section is a growth area on purpose</h3>
   <p>The repo is still expanding here, but the framing is now in place: start with the SRE loop, then use platform and project pages to keep the topic tied to real production work instead of tool lists.</p>
 </div>
+
+

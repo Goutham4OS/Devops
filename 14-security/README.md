@@ -1,5 +1,6 @@
-﻿---
+---
 title: 'Security'
+permalink: /14-security/
 ---
 
 # Security
@@ -93,4 +94,6 @@ flowchart LR
   <h3>Treat security as an operating model</h3>
   <p>The most useful reading habit here is to ask how trust is maintained from commit to runtime. That keeps security grounded in platform behavior instead of turning it into a disconnected checklist.</p>
 </div>
+
+
 

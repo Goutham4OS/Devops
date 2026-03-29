@@ -1,5 +1,6 @@
-﻿---
+---
 title: 'Linux'
+permalink: /02-linux/
 ---
 
 # Linux
@@ -93,4 +94,6 @@ flowchart LR
   <h3>Read Linux as a runtime model</h3>
   <p>Do not treat this section like a command catalog. Focus on process behavior, isolation, and resource control first because those ideas carry directly into containers and cloud operations.</p>
 </div>
+
+
 

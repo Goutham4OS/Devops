@@ -1,5 +1,6 @@
-﻿---
+---
 title: 'Projects'
+permalink: /15-projects/
 ---
 
 # Projects
@@ -93,3 +94,5 @@ flowchart LR
   <h3>Use projects to connect layers</h3>
   <p>If a lower-level concept feels abstract, jump into a project story and watch where it appears in a real architecture or migration decision. That back-and-forth is one of the fastest ways to build intuition.</p>
 </div>
+
+

@@ -1,5 +1,6 @@
-﻿---
+---
 title: 'Git'
+permalink: /04-git/
 ---
 
 # Git
@@ -93,3 +94,5 @@ flowchart LR
   <h3>Read Git as a change-safety topic</h3>
   <p>Keep asking one question: how does this Git habit make change safer, faster, and more reversible? That framing keeps the section aligned with real DevOps outcomes.</p>
 </div>
+
+

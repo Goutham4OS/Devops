@@ -1,5 +1,6 @@
-﻿---
+---
 title: 'CI CD'
+permalink: /09-ci-cd/
 ---
 
 # CI CD
@@ -93,4 +94,6 @@ flowchart LR
   <h3>Read pipelines as systems, not only YAML</h3>
   <p>Focus on trust boundaries, promotion points, rollback paths, and runtime verification. Those ideas matter more than the exact CI tool syntax.</p>
 </div>
+
+
 

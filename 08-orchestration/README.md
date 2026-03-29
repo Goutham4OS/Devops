@@ -1,5 +1,6 @@
-﻿---
+---
 title: 'Orchestration'
+permalink: /08-orchestration/
 ---
 
 # Orchestration
@@ -93,3 +94,5 @@ flowchart LR
   <h3>Keep the control-loop model in mind</h3>
   <p>If Kubernetes feels too large, come back to one question: what desired state is the platform trying to maintain? That question makes controllers, rollouts, scaling, and recovery much easier to follow.</p>
 </div>
+
+

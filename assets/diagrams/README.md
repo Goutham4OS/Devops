@@ -1,5 +1,6 @@
 ---
 title: 'Diagram Library'
+permalink: /assets/diagrams/
 ---
 
 # Diagram Library
@@ -19,3 +20,5 @@ These pages hold the new high-level diagrams for the site.
 11. [Edge routing decision map](../../01-networking/edge-routing-decision-map.html)
 12. [Observability and SRE loop](../../10-observability/observability-and-sre-loop.html)
 13. [Platform engineering operating model](../../13-platform-engineering/internal-developer-platform.html)
+
+

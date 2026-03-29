@@ -1,5 +1,6 @@
-﻿---
+---
 title: 'Platform Engineering'
+permalink: /13-platform-engineering/
 ---
 
 # Platform Engineering
@@ -93,3 +94,5 @@ flowchart LR
   <h3>Think product, not only tooling</h3>
   <p>Keep asking what problem the platform removes for application teams, what safe defaults it sets, and how success will be measured. That turns platform engineering from abstract governance into useful design.</p>
 </div>
+
+

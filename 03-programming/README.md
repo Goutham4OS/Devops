@@ -1,5 +1,6 @@
 ---
 title: 'Programming'
+permalink: /03-programming/
 ---
 
 # Programming
@@ -20,3 +21,5 @@ Python and automation patterns that support delivery, operations, and platform w
 10. [Python/10_exception_handling.md](../Python/10_exception_handling.html)
 11. [Python/11_cli_click.md](../Python/11_cli_click.html)
 12. [Python/12_devops_web_automation.md](../Python/12_devops_web_automation.html)
+
+

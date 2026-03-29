@@ -598,7 +598,7 @@
   {% endcapture %}
 
   {% case section_key %}
-    {% when 'README.html' %}
+    {% when 'repository-guide' %}
       {% assign takeaway_summary = 'This repository guide matters because DevOps learning is easier when the topics are connected as one system instead of memorized as disconnected tools.' %}
       {% capture takeaway_points %}
         <li><strong>See the full map:</strong> Git, CI/CD, containers, Kubernetes, cloud, and SRE all build on each other.</li>
@@ -769,7 +769,7 @@
       <div class="hero-links">
         <a href="{{ '/index.html' | relative_url }}">⌂ Journey Map</a>
         <a href="{{ '/navigation.html' | relative_url }}">☰ Navigation Hub</a>
-        <a href="{{ '/README.html' | relative_url }}">▣ Repository Guide</a>
+        <a href="{{ '/repository-guide/' | relative_url }}">▣ Repository Guide</a>
       </div>
     </section>
     <article class="content">
@@ -918,3 +918,4 @@
   </script>
 </body>
 </html>
+
