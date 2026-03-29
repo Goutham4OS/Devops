@@ -1,5 +1,3 @@
-# Default/local values (equivalent to dev).
-# Prefer environment-specific files under terraform/environments/<env>/terraform.tfvars.
 location            = "East US"
 resource_group_name = "rg-dev"
 vnet_name           = "vnet-dev"
