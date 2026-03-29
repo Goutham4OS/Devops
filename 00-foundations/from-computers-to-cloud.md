@@ -29,9 +29,9 @@ flowchart LR
 
 ## Current source material
 
-- [CS/Machines to computers](../CS/Machines%20to%20computers/)
-- [CS/Disk](../CS/Disk/)
-- [CS/Virtual_Memory](../CS/Virtual_Memory/)
+- [CS/Machines to computers](../CS/Machines%20to%20computers/index.html)
+- [CS/Disk](../CS/Disk/index.html)
+- [CS/Virtual_Memory](../CS/Virtual_Memory/index.html)
 - [basics/3.0.LinuxOSIntro.md](../basics/3.0.LinuxOSIntro.html)
 
 ## What to build next

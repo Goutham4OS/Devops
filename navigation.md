@@ -13,6 +13,7 @@ Use this page when you want a structured text navigation path.
 - [Cloud architecture and well-architected review](./12-cloud/cloud-architecture-and-well-architected.html)
 - [DevOps to Platform to SRE learning journey](./15-projects/devops-platform-sre-learning-journey.html)
 - [From computers to cloud](./00-foundations/from-computers-to-cloud.html)
+- [User mode, kernel mode, and the mode bit](./CS/Machines%20to%20computers/9.user_mode_kernel_mode_and_mode_bit.html)
 - [Software delivery map](./09-ci-cd/software-delivery-map.html)
 - [PR review and branching](./04-git/pr-review-and-branching.html)
 - [DevSecOps supply chain](./14-security/devsecops-supply-chain.html)
