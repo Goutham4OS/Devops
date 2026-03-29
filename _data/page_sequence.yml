@@ -1,0 +1,79 @@
+pages:
+  - url: /README.html
+    label: Repository Guide
+  - url: /navigation.html
+    label: Navigation Hub
+  - url: /00-foundations/README.html
+    label: Foundations
+  - url: /00-foundations/from-computers-to-cloud.html
+    label: From Computers to Cloud
+  - url: /CS/Machines%20to%20computers/index.html
+    label: Machines to Computers
+  - url: /CS/Machines%20to%20computers/1.CS_Basics_CPU_Mmeory.html
+    label: CPU and Memory Basics
+  - url: /CS/Machines%20to%20computers/2.CPUcycles.html
+    label: CPU Cycles
+  - url: /CS/Machines%20to%20computers/3.how_instructions_control_logic_without_rewiring.html
+    label: Instructions Control Logic
+  - url: /CS/Machines%20to%20computers/4.why_two_programs_run_slower_than_one.html
+    label: Why Two Programs Run Slower Than One
+  - url: /CS/Machines%20to%20computers/5.storage_and_memory_fundamentals.html
+    label: Storage and Memory Fundamentals
+  - url: /CS/Machines%20to%20computers/6.end_to_end_kernel_cpu_program_flow.html
+    label: Power Button to Running Programs
+  - url: /CS/Machines%20to%20computers/7.timer_interrupts_and_cpu_multitasking%20(1).html
+    label: Timer Interrupts and Multitasking
+  - url: /CS/Machines%20to%20computers/8.rom_firmware_bootloader_kernel_os_storage.html
+    label: ROM, Firmware, Bootloader, Kernel, and OS Storage
+  - url: /CS/Machines%20to%20computers/9.user_mode_kernel_mode_and_mode_bit.html
+    label: User Mode, Kernel Mode, and the Mode Bit
+  - url: /CS/Disk/index.html
+    label: Disk Foundations
+  - url: /CS/Disk/1.how_disks_read_write_and_why_blocks_exist.html
+    label: How Disks Read and Write
+  - url: /CS/Disk/2.filesystem_explained_from_blocks_to_files.html
+    label: Filesystem from Blocks to Files
+  - url: /CS/Disk/3.cloud_storage_from_blocks_to_object_storage.html
+    label: Cloud Storage from Blocks to Object Storage
+  - url: /CS/Virtual_Memory/index.html
+    label: Virtual Memory Foundations
+  - url: /CS/Virtual_Memory/virtual_memory_from_first_principlesand%20paging_and_.html
+    label: Virtual Memory from First Principles
+  - url: /02-linux/README.html
+    label: Linux
+  - url: /04-git/README.html
+    label: Git
+  - url: /04-git/pr-review-and-branching.html
+    label: PR Review and Branching
+  - url: /09-ci-cd/README.html
+    label: CI CD
+  - url: /09-ci-cd/software-delivery-map.html
+    label: Software Delivery Map
+  - url: /14-security/devsecops-supply-chain.html
+    label: DevSecOps Supply Chain
+  - url: /11-infra-as-code/README.html
+    label: Infrastructure as Code
+  - url: /11-infra-as-code/provisioning-flow.html
+    label: Provisioning Flow
+  - url: /12-cloud/README.html
+    label: Cloud
+  - url: /12-cloud/runtime-edge-traffic-path.html
+    label: Runtime and Edge Traffic Path
+  - url: /12-cloud/acr-and-runtime-promotion.html
+    label: ACR and Runtime Promotion
+  - url: /12-cloud/cloud-architecture-and-well-architected.html
+    label: Cloud Architecture and Well-Architected Review
+  - url: /10-observability/README.html
+    label: Observability
+  - url: /10-observability/observability-and-sre-loop.html
+    label: Observability and SRE Loop
+  - url: /13-platform-engineering/README.html
+    label: Platform Engineering
+  - url: /13-platform-engineering/internal-developer-platform.html
+    label: Internal Developer Platform
+  - url: /15-projects/README.html
+    label: Projects
+  - url: /15-projects/vm-to-aks-modernization-story.html
+    label: VM to AKS Modernization Story
+  - url: /15-projects/devops-platform-sre-learning-journey.html
+    label: DevOps to Platform to SRE Learning Journey

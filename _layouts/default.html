@@ -6,103 +6,173 @@
   <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
   <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | escape }}">
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
     :root {
-      --bg: #050505;
-      --paper: rgba(14, 16, 20, 0.88);
-      --paper-2: rgba(20, 23, 29, 0.96);
-      --ink: #f7f7f2;
-      --muted: #a7b0bb;
-      --line: rgba(255, 255, 255, 0.1);
-      --accent: #2dd4bf;
-      --accent-2: #60a5fa;
+      --bg: #0a0e1a;
+      --bg2: #0f1525;
+      --bg3: #131929;
+      --surface: #1a2035;
+      --surface2: #1f2845;
+      --paper: rgba(15, 21, 37, 0.88);
+      --paper-2: rgba(19, 25, 41, 0.96);
+      --border: rgba(99, 179, 237, 0.15);
+      --border-strong: rgba(99, 179, 237, 0.28);
+      --text: #e2e8f0;
+      --text2: #94a3b8;
+      --text3: #64748b;
+      --accent: #63b3ed;
+      --accent-2: #2dd4bf;
+      --accent-3: #7c3aed;
       --code: #0c1117;
       --shadow: 0 24px 80px rgba(0, 0, 0, 0.38);
-      --max: 1080px;
+      --max: 1120px;
+      --mono: 'JetBrains Mono', monospace;
+      --sans: 'IBM Plex Sans', sans-serif;
+      --display: 'Space Grotesk', sans-serif;
     }
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
     body {
       margin: 0;
-      color: var(--ink);
+      color: var(--text);
       background:
-        radial-gradient(circle at top left, rgba(45, 212, 191, 0.16), transparent 28%),
-        radial-gradient(circle at top right, rgba(96, 165, 250, 0.14), transparent 24%),
-        linear-gradient(180deg, #070707 0%, #0d1015 100%);
-      font-family: 'IBM Plex Sans', sans-serif;
-      line-height: 1.7;
+        radial-gradient(circle at top left, rgba(99, 179, 237, 0.16), transparent 26%),
+        radial-gradient(circle at top right, rgba(124, 58, 237, 0.12), transparent 24%),
+        linear-gradient(180deg, #070b14 0%, #0d1422 100%);
+      font-family: var(--sans);
+      line-height: 1.72;
     }
-    a { color: var(--accent-2); text-decoration: none; }
-    a:hover { color: var(--accent); }
-    .shell { max-width: var(--max); margin: 0 auto; padding: 24px 18px 72px; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { color: var(--accent-2); }
     .topbar {
-      position: sticky;
+      position: fixed;
       top: 0;
-      z-index: 20;
+      left: 0;
+      right: 0;
+      z-index: 50;
+      height: 56px;
+      background: rgba(10, 14, 26, 0.92);
       backdrop-filter: blur(12px);
-      background: rgba(5, 5, 5, 0.78);
-      border-bottom: 1px solid var(--line);
+      border-bottom: 1px solid var(--border);
     }
     .topbar-inner {
-      max-width: var(--max);
+      max-width: calc(var(--max) + 40px);
       margin: 0 auto;
-      padding: 12px 18px;
+      height: 100%;
+      padding: 0 20px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 16px;
+      gap: 18px;
     }
-    .brand {
-      color: var(--ink);
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 20px;
-      font-weight: 700;
-      letter-spacing: 0.01em;
-    }
-    .nav {
+    .topbar-meta {
       display: flex;
+      align-items: center;
+      gap: 14px;
+      min-width: 0;
       flex-wrap: wrap;
-      gap: 10px;
     }
-    .nav a {
+    .logo {
+      color: var(--accent);
+      font-family: var(--mono);
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      white-space: nowrap;
+    }
+    .breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--text3);
+      min-width: 0;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .breadcrumb a { color: var(--text3); }
+    .breadcrumb a:hover { color: var(--accent); }
+    .breadcrumb .current {
+      color: var(--text);
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .top-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+    .top-pill {
       display: inline-flex;
       align-items: center;
-      padding: 9px 12px;
-      border: 1px solid var(--line);
+      gap: 8px;
+      min-height: 34px;
+      padding: 8px 12px;
       border-radius: 999px;
-      color: var(--ink);
+      border: 1px solid var(--border);
       background: rgba(255, 255, 255, 0.03);
-      font-size: 14px;
+      color: var(--text);
+      font-family: var(--mono);
+      font-size: 11px;
       font-weight: 600;
+      letter-spacing: 0.01em;
+      transition: border-color 160ms ease, transform 160ms ease, background 160ms ease;
+    }
+    .top-pill:hover {
+      border-color: var(--border-strong);
+      transform: translateY(-1px);
+      background: rgba(255, 255, 255, 0.05);
+    }
+    .top-pill.is-disabled {
+      opacity: 0.45;
+      pointer-events: none;
+    }
+    .shell {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 88px 18px 72px;
+    }
+    .hero,
+    .content,
+    .page-nav {
+      background: var(--paper);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(10px);
     }
     .hero {
-      margin-top: 24px;
-      background: var(--paper);
-      border: 1px solid var(--line);
-      border-radius: 28px;
       padding: 24px;
-      box-shadow: var(--shadow);
     }
     .eyebrow {
       text-transform: uppercase;
       letter-spacing: 0.12em;
-      font-size: 12px;
-      color: var(--accent);
-      font-weight: 700;
+      font-size: 11px;
+      color: var(--accent-2);
+      font-family: var(--mono);
+      font-weight: 600;
       margin-bottom: 10px;
     }
-    .hero h1, .content h1, .content h2, .content h3 {
-      font-family: 'Space Grotesk', sans-serif;
+    .hero h1,
+    .content h1,
+    .content h2,
+    .content h3 {
+      font-family: var(--display);
     }
     .hero h1 {
       margin: 0;
       font-size: clamp(28px, 4vw, 44px);
       line-height: 1.08;
+      letter-spacing: -0.02em;
     }
     .hero p {
       margin: 12px 0 0;
-      color: var(--muted);
-      max-width: 760px;
+      color: var(--text2);
+      max-width: 780px;
     }
     .hero-links {
       display: flex;
@@ -113,20 +183,19 @@
     .hero-links a {
       display: inline-flex;
       align-items: center;
+      gap: 8px;
       padding: 10px 14px;
       border-radius: 999px;
-      border: 1px solid var(--line);
+      border: 1px solid var(--border);
       background: rgba(255, 255, 255, 0.04);
-      color: var(--ink);
+      color: var(--text);
+      font-family: var(--mono);
+      font-size: 11px;
       font-weight: 600;
     }
     .content {
       margin-top: 24px;
-      background: var(--paper);
-      border: 1px solid var(--line);
-      border-radius: 28px;
       padding: 26px;
-      box-shadow: var(--shadow);
       overflow-wrap: anywhere;
     }
     .content > :first-child { margin-top: 0; }
@@ -139,8 +208,11 @@
       font-size: 28px;
     }
     .content h3 { font-size: 22px; margin-top: 26px; }
-    .content p, .content li, .content blockquote { color: #d7dee7; }
-    .content ul, .content ol { padding-left: 24px; }
+    .content p,
+    .content li,
+    .content blockquote { color: #d7dee7; }
+    .content ul,
+    .content ol { padding-left: 24px; }
     .content li + li { margin-top: 6px; }
     .content blockquote {
       margin: 20px 0;
@@ -150,15 +222,15 @@
       border-radius: 0 16px 16px 0;
     }
     .content code {
-      font-family: Consolas, 'Courier New', monospace;
-      font-size: 0.94em;
+      font-family: var(--mono);
+      font-size: 0.92em;
       background: rgba(255, 255, 255, 0.06);
       padding: 0.18em 0.38em;
       border-radius: 6px;
     }
     .content pre {
       background: var(--code);
-      border: 1px solid var(--line);
+      border: 1px solid var(--border);
       border-radius: 18px;
       padding: 18px;
       overflow: auto;
@@ -174,22 +246,23 @@
       margin: 22px 0;
       overflow: hidden;
       border-radius: 14px;
-      border: 1px solid var(--line);
+      border: 1px solid var(--border);
     }
-    .content th, .content td {
+    .content th,
+    .content td {
       padding: 12px 14px;
-      border-bottom: 1px solid var(--line);
+      border-bottom: 1px solid var(--border);
       text-align: left;
       vertical-align: top;
     }
     .content th {
-      color: var(--ink);
+      color: var(--text);
       background: rgba(255, 255, 255, 0.05);
     }
     .content tr:last-child td { border-bottom: 0; }
     .content hr {
       border: 0;
-      border-top: 1px solid var(--line);
+      border-top: 1px solid var(--border);
       margin: 28px 0;
     }
     .content img {
@@ -197,37 +270,121 @@
       height: auto;
       border-radius: 16px;
     }
+    .page-nav {
+      margin-top: 24px;
+      padding: 14px;
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 12px;
+      align-items: stretch;
+    }
+    .page-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 6px;
+      min-height: 84px;
+      padding: 14px 16px;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      background: var(--paper-2);
+      color: var(--text);
+      transition: border-color 160ms ease, transform 160ms ease, background 160ms ease;
+    }
+    .page-card:hover {
+      border-color: var(--border-strong);
+      transform: translateY(-1px);
+      background: rgba(255, 255, 255, 0.05);
+    }
+    .page-card.is-disabled {
+      opacity: 0.42;
+      pointer-events: none;
+    }
+    .page-card .nav-label {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--text3);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .page-card strong {
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 1.35;
+    }
+    .page-card.prev { text-align: left; }
+    .page-card.next { text-align: right; }
+    .page-card.home {
+      min-width: 190px;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      border-color: rgba(45, 212, 191, 0.22);
+      background: rgba(45, 212, 191, 0.08);
+    }
+    .page-card.home .nav-label { color: var(--accent-2); }
     .footer {
       margin-top: 18px;
-      color: var(--muted);
-      font-size: 14px;
+      color: var(--text3);
+      font-size: 12px;
       text-align: center;
+      font-family: var(--mono);
     }
     .mermaid {
       display: block;
       background: var(--code);
-      border: 1px solid var(--line);
+      border: 1px solid var(--border);
       border-radius: 18px;
       padding: 16px;
       overflow: auto;
     }
-    @media (max-width: 820px) {
-      .topbar-inner { align-items: flex-start; flex-direction: column; }
-      .shell { padding: 18px 14px 56px; }
-      .hero, .content { border-radius: 22px; padding: 20px; }
+    @media (max-width: 980px) {
+      .topbar {
+        height: auto;
+        position: sticky;
+      }
+      .topbar-inner {
+        padding: 12px 14px;
+        align-items: flex-start;
+        flex-direction: column;
+        height: auto;
+      }
+      .shell {
+        padding-top: 28px;
+      }
+      .page-nav {
+        grid-template-columns: 1fr;
+      }
+      .page-card.next {
+        text-align: left;
+      }
+    }
+    @media (max-width: 760px) {
+      .shell { padding: 24px 14px 56px; }
+      .hero, .content, .page-nav { border-radius: 20px; }
+      .hero, .content { padding: 20px; }
+      .hero-links,
+      .top-actions { gap: 8px; }
     }
   </style>
 </head>
 <body>
   <header class="topbar">
     <div class="topbar-inner">
-      <a class="brand" href="{{ '/index.html' | relative_url }}">DevOps From Scratch</a>
-      <nav class="nav">
-        <a href="{{ '/index.html' | relative_url }}">Journey Map</a>
-        <a href="{{ '/navigation.html' | relative_url }}">Navigation Hub</a>
-        <a href="{{ '/roadmap.html' | relative_url }}">Roadmap</a>
-        <a href="{{ '/migration-map.html' | relative_url }}">Migration Map</a>
-      </nav>
+      <div class="topbar-meta">
+        <a class="logo" href="{{ '/index.html' | relative_url }}">⬡ DEVOPS ATLAS</a>
+        <div class="breadcrumb">
+          <a href="{{ '/index.html' | relative_url }}">overview</a>
+          <span class="sep">›</span>
+          <span class="current">{{ page.title | default: page.name | replace: '.md', '' | replace: '-', ' ' }}</span>
+        </div>
+      </div>
+      <div class="top-actions">
+        <a class="top-pill" href="{{ '/index.html' | relative_url }}">⌂ Home</a>
+        <a class="top-pill" href="{{ '/navigation.html' | relative_url }}">☰ Navigation</a>
+        <a class="top-pill is-disabled" data-role="prev" aria-disabled="true">← Previous</a>
+        <a class="top-pill is-disabled" data-role="next" aria-disabled="true">Next →</a>
+      </div>
     </div>
   </header>
   <main class="shell">
@@ -236,31 +393,144 @@
       <h1>{{ page.title | default: page.name | replace: '.md', '' | replace: '-', ' ' }}</h1>
       <p>{{ page.excerpt | default: site.description | strip_html | normalize_whitespace }}</p>
       <div class="hero-links">
-        <a href="{{ '/index.html' | relative_url }}">Journey Map</a>
-        <a href="{{ '/navigation.html' | relative_url }}">Navigation Hub</a>
-        <a href="{{ '/README.html' | relative_url }}">Repository Guide</a>
+        <a href="{{ '/index.html' | relative_url }}">⌂ Journey Map</a>
+        <a href="{{ '/navigation.html' | relative_url }}">☰ Navigation Hub</a>
+        <a href="{{ '/README.html' | relative_url }}">▣ Repository Guide</a>
       </div>
     </section>
     <article class="content">
       {{ content }}
     </article>
+    <nav class="page-nav" aria-label="Page navigation">
+      <a class="page-card prev is-disabled" data-role="prev" aria-disabled="true">
+        <span class="nav-label">Previous</span>
+        <strong data-nav-title>Start of this path</strong>
+      </a>
+      <a class="page-card home" href="{{ '/index.html' | relative_url }}">
+        <span class="nav-label">Home</span>
+        <strong>Back to Journey Map</strong>
+      </a>
+      <a class="page-card next is-disabled" data-role="next" aria-disabled="true">
+        <span class="nav-label">Next</span>
+        <strong data-nav-title>End of this path</strong>
+      </a>
+    </nav>
     <div class="footer">
       Built with Jekyll so markdown pages render as full site pages on GitHub Pages.
     </div>
   </main>
   <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
   <script>
+    const baseUrl = {{ site.baseurl | jsonify }};
+    const currentUrl = {{ page.url | jsonify }};
+    const curatedSequence = {{ site.data.page_sequence.pages | jsonify }};
+    const allPageUrls = {{ site.pages | map: 'url' | jsonify }};
+
+    function withBase(url) {
+      return (baseUrl || '') + url;
+    }
+
+    function decodeLabel(url) {
+      const decoded = decodeURIComponent(url || '');
+      const file = decoded.split('/').pop() || '';
+      if (/^(README|index)\.html$/i.test(file)) {
+        const parent = decoded.split('/').filter(Boolean);
+        return parent.length > 1 ? titleize(parent[parent.length - 2]) : 'Overview';
+      }
+      return titleize(file.replace(/\.html$/i, '').replace(/^\d+[._-]?/, ''));
+    }
+
+    function titleize(text) {
+      return text
+        .replace(/[_-]+/g, ' ')
+        .replace(/\s+/g, ' ')
+        .replace(/\b\w/g, function (c) { return c.toUpperCase(); })
+        .trim();
+    }
+
+    function dirOf(url) {
+      return url.slice(0, url.lastIndexOf('/') + 1);
+    }
+
+    function fileRank(url) {
+      const file = decodeURIComponent(url.split('/').pop() || '').toLowerCase();
+      if (file === 'index.html') return '0-index';
+      if (file === 'readme.html') return '1-readme';
+      return '2-' + file;
+    }
+
+    function uniqueUrls(urls) {
+      return Array.from(new Set((urls || []).filter(function (url) {
+        return typeof url === 'string' && url.endsWith('.html');
+      })));
+    }
+
+    function sameDirectorySequence(url) {
+      const dir = dirOf(url);
+      return uniqueUrls(allPageUrls)
+        .filter(function (item) { return dirOf(item) === dir; })
+        .sort(function (a, b) { return fileRank(a).localeCompare(fileRank(b)); })
+        .map(function (item) {
+          return { url: item, label: decodeLabel(item) };
+        });
+    }
+
+    function sequenceFor(url) {
+      const curatedIndex = curatedSequence.findIndex(function (item) { return item.url === url; });
+      if (curatedIndex !== -1) {
+        return { list: curatedSequence, index: curatedIndex };
+      }
+
+      const fallback = sameDirectorySequence(url);
+      const fallbackIndex = fallback.findIndex(function (item) { return item.url === url; });
+      if (fallbackIndex !== -1 && fallback.length > 1) {
+        return { list: fallback, index: fallbackIndex };
+      }
+
+      return null;
+    }
+
+    function setNavLink(role, target) {
+      const nodes = document.querySelectorAll('[data-role="' + role + '"]');
+      nodes.forEach(function (node) {
+        if (!target) {
+          node.classList.add('is-disabled');
+          node.setAttribute('aria-disabled', 'true');
+          node.removeAttribute('href');
+          const titleNode = node.querySelector('[data-nav-title]');
+          if (titleNode) {
+            titleNode.textContent = role === 'prev' ? 'Start of this path' : 'End of this path';
+          }
+          return;
+        }
+        node.classList.remove('is-disabled');
+        node.setAttribute('aria-disabled', 'false');
+        node.setAttribute('href', withBase(target.url));
+        const titleNode = node.querySelector('[data-nav-title]');
+        if (titleNode) {
+          titleNode.textContent = target.label || decodeLabel(target.url);
+        }
+      });
+    }
+
     document.addEventListener('DOMContentLoaded', function () {
       document.querySelectorAll('pre code.language-mermaid').forEach(function (code) {
-        var pre = code.parentElement;
-        var block = document.createElement('div');
+        const pre = code.parentElement;
+        const block = document.createElement('div');
         block.className = 'mermaid';
         block.textContent = code.textContent;
         pre.replaceWith(block);
       });
+
       if (window.mermaid) {
         mermaid.initialize({ startOnLoad: false, theme: 'dark', securityLevel: 'loose' });
         mermaid.run({ querySelector: '.mermaid' });
+      }
+
+      const sequence = sequenceFor(currentUrl);
+      if (sequence) {
+        setNavLink('prev', sequence.list[sequence.index - 1] || null);
+        setNavLink('next', sequence.list[sequence.index + 1] || null);
       }
     });
   </script>
